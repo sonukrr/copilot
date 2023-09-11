@@ -1,0 +1,188 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+
+$dark-primary-text: #2E2E2E;
+$dark-secondary-text: #666666;
+$dark-secondary-title: #3D3D3D;
+$light-primary-text: #FFFFFF;
+$cp-primary-color : #28589F;
+$cp-primary-var-color : #153576;
+$cp-secondary-color : #329EE2;
+$cp-lines-color: #C5C5C5;
+$cp-accent-color: #316CC4;
+$cp-border-color: #D9D9D9;
+$cp-card-border-color: #D8D9E5;
+$cp-surface-color: #F1F1F1;
+
+$cp-error-color: #B00020;
+$cp-warning-color: #FF9800;
+$cp-success-color: #008800;
+
+
+$cp-palette-map-default: (
+  50 : #E5EBF3,
+  100 : #BFCDE2,
+  200 : #94ACCF,
+  300 : #698ABC,
+  400 : #4871AD,
+  500 : $cp-primary-color,
+  600 : #245097,
+  700 : #1E478D,
+  800 : #183D83,
+  900 : #0F2D72,
+  A100 : #A6BDFF,
+  A200 : #7397FF,
+  A400 : #4071FF,
+  A700 : #265EFF,
+  contrast: (50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$cp-palette-map-accent: (
+  50 : #E6EDF8,
+  100 : #C1D3ED,
+  200 : #98B6E2,
+  300 : #6F98D6,
+  400 : #5082CD,
+  500 : #316CC4,
+  600 : #2C64BE,
+  700 : #2559B6,
+  800 : #1F4FAF,
+  900 : #133DA2,
+  A100 : #D4DFFF,
+  A200 : #A1B9FF,
+  A400 : #6E93FF,
+  A700 : #5480FF,
+  contrast: (50 : $dark-primary-text,
+    100 : $dark-primary-text,
+    200 : $dark-primary-text,
+    300 : $dark-primary-text,
+    400 : $light-primary-text,
+    500 : $light-primary-text,
+    600 : $light-primary-text,
+    700 : $light-primary-text,
+    800 : $light-primary-text,
+    900 : $light-primary-text,
+    A100 : $dark-primary-text,
+    A200 : $dark-primary-text,
+    A400 : $dark-primary-text,
+    A700 : $dark-primary-text,
+  )
+);
+
+$cp-palette-map-error: (
+    50 : #F6E0E4,
+    100 : #E7B3BC,
+    200 : #D88090,
+    300 : #C84D63,
+    400 : #BC2641,
+    500 : $cp-error-color,
+    600 : #A9001C,
+    700 : #A00018,
+    800 : #970013,
+    900 : #87000B,
+    A100 : #FFB3B6,
+    A200 : #FF8085,
+    A400 : #FF4D53,
+    A700 : #FF343B,
+  contrast: (50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $dark-primary-text,
+    800: $dark-primary-text,
+    900: $dark-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text,
+  )
+);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$cp-primary: mat.define-palette($cp-palette-map-default);
+$cp-accent: mat.define-palette($cp-palette-map-accent);
+$cp-warn: mat.define-palette($cp-palette-map-error);
+
+// The warn palette is optional (defaults to red).
+// $trianz-warn: mat.define-palette(mat.$red-palette);
+
+$cp-typography: mat.define-typography-config(
+    $font-family: 'Source Sans Pro'
+  );
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$cp-theme: mat.define-light-theme((color: (primary: $cp-primary,
+        accent: $cp-accent,
+        warn: $cp-warn,
+      ),
+      typography: $cp-typography,
+      density: -1,
+      ));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($cp-theme);
+
+@include mat.form-field-density(-3);
+
+// reduce the vertical height of checkboxes
+.mat-mdc-checkbox{
+  height: 30px;
+}
+
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  main {
+    zoom: 0.99;
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.5) {
+  main {
+    zoom: 0.985;
+  }
+}
+
+.mat-mdc-option {
+  min-height: 35px !important;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+
+  body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Source Sans Pro';
+    overflow: hidden;
+
+  }
+}
+
+

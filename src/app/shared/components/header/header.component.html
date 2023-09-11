@@ -1,0 +1,52 @@
+<div class="header">
+  <div class="header__icon cp-margin-left-5">
+    <mat-icon class="d-sm-block d-md-none mobile-menu--icon" color="primary" (click)="toggleSideNav()">
+      {{mainService.toggleSideNavForMobile ? 'menu' : 'close'}}
+    </mat-icon>
+
+    <span>
+      <img width="125" height="42" src="assets/img/logo.svg" alt="Logo not found">
+    </span>
+  </div>
+
+  <div class="header__nav cp-margin-rt-5">
+    <div class="header__nav__help">
+      <button mat-button matTooltip="Help">
+        <a>
+          <span>
+            <mat-icon class="header__nav__user__icon cp-side-nav-icon material-icons-outlined">
+              help
+            </mat-icon>
+          </span>
+        </a>
+      </button>
+    </div>
+    <div class="header__nav__notification">
+      <button mat-button matTooltip="Notifications">
+        <a>
+          <span>
+            <mat-icon class="header__nav__user__icon cp-side-nav-icon material-icons-outlined">
+              notifications
+            </mat-icon>
+          </span>
+        </a>
+      </button>
+    </div>
+    <div class="header__nav__user">
+      <button mat-button [matMenuTriggerFor]="menu" matTooltip="Account Settings">
+        <a>
+          <span>
+            <mat-icon class="header__nav__user__icon cp-side-nav-icon">
+              account_circle
+            </mat-icon>
+          </span>
+        </a>
+
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="signOutUserHandler()"><mat-icon color="accent">logout</mat-icon> <span
+            class="cp-accent-color">Sign Out</span></button>
+      </mat-menu>
+    </div>
+  </div>
+</div>

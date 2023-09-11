@@ -1,0 +1,18 @@
+<section id="page">
+    <ng-container >
+      <app-header class="cp-bg-standard mat-elevation-z1"></app-header>
+
+      <app-side-nav [navs]="mainService.navs" (navChange)="mainService.updateSelectedNav($event);"></app-side-nav>
+
+      <main class="main-page cp-custom-scrollbar cp-border-radius-5">
+
+        <div id="mainPageContent" class="main-page__content">
+            <router-outlet></router-outlet>
+        </div>
+
+      </main>
+
+      <!-- <app-footer *ngIf="(pageTitle | lowercase) == 'manage companies'"></app-footer> -->
+    </ng-container>
+
+  </section>

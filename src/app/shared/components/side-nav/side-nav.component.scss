@@ -1,0 +1,116 @@
+#main-navigation {
+  background: #FFFFFF 0% 0%;
+  border-radius: 4px;
+  height: 100vh;
+  width: 4em;
+
+  .navs {
+    padding: 0.875em 0.625em;
+
+    &__nav {
+      text-align: center;
+      margin: 0em auto 0.75em;
+      cursor: pointer;
+      width: auto;
+      height: auto;
+      display: flex;
+
+      &__icon {
+        padding: 0.6em 0em !important;
+        background: rgba(217, 217, 217, 0.2);
+        border-radius: 8px;
+        width: 2.75em;
+        height: 2.75em;
+
+        img {
+          height: 1.5em;
+          width: 100%;
+        }
+      }
+
+      &__text {
+
+        span {
+          padding-left: 0.5em;
+          color: #737373;
+          line-height: 2.725em;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        align-items: center;
+      }
+    }
+
+    &__nav:hover,
+    :focus {
+      border-radius: 8px;
+      background: #F5F7FB;
+      // box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+
+
+      span {
+        color: #28589F;
+      }
+
+      .icon {
+        background: #D4DDED;
+      }
+
+      -webkit-transition: all 200ms linear;
+      -moz-transition: all 200ms linear;
+      -o-transition: all 200ms linear;
+      -ms-transition: all 200ms linear;
+      transition: all 200ms linear;
+
+    }
+
+  }
+
+  .cp-nav-active {
+    border-radius: 8px;
+    background: #28589F !important;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 8px;
+
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    transition: all 200ms linear;
+
+
+    div {
+      color: #2B5EAC !important;
+    }
+
+    .navs__nav__icon {
+      background: #28589F !important;
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .navs__nav__text {
+      span {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+
+
+
+}
+
+@media (max-width: 576px) {
+  .sm-display--none {
+    display: none;
+  }
+
+  nav {
+    transition: all 10s ease-out;
+  }
+}

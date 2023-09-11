@@ -1,0 +1,27 @@
+<nav #navElRef [ngClass]="{'sm-display--none': mainService.toggleSideNavForMobile}">
+  <div>
+    <nav id="main-navigation" (mouseenter)="onSideNavToggle()" (mouseleave)="onSideNavToggle()"
+      [@onSideNavChange]="sideNavState ? 'open' : 'close'">
+      <div class="navs">
+        <ng-container *ngFor="let nav of navs?.options">
+          <div #navPane class="navs__nav" (mouseenter)="setIconColor(navPane ,nav.id, 'hover-on');"
+            (mouseleave)="setIconColor(navPane ,nav.id, 'hover-off');"
+            [ngClass]="{'cp-nav-active': nav.id === navs?.selected?.id}"
+            (click)="updateSelection(nav); setIconColor(navPane ,nav.id, 'select');">
+            <div class="navs__nav__icon icon">
+              <a mat-list-item>
+                <app-svg-icon class="svg-element" [color]="iconColor[nav.id]"
+                  [path]="setSVGpath(nav)"></app-svg-icon>
+              </a>
+            </div>
+            <div class="navs__nav__text">
+              <a>
+                <span class="mat-subheading-2" [@animateText]="showLinkText ? 'show' : 'hide'">{{nav.text}}</span>
+              </a>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </nav>
+  </div>
+</nav>

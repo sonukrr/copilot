@@ -1,0 +1,69 @@
+$body-bg: #000;
+$body-color: #111;
+
+
+// Override Bootstrap's color variables
+$primary: #28589F;       // Primary color
+$secondary: #666666;     // Secondary color
+$success: #008800;       // Success color
+$info: #17A2B8;          // Info color
+$warning: #FF9800;       // Warning color
+$danger: #B00020;        // Danger color
+$light: #F8F9FA;         // Light color
+$dark: #343A40;          // Dark color
+
+// Customize grays used in Bootstrap
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Customize link color
+$link-color: #316CC4;
+
+// Customize background and text colors
+$body-bg: #ffffff;        // Background color
+$body-color: #212529;     // Text color
+
+// Customize border color
+$border-color: #D8D9E5;
+
+// Customize focus color for form elements
+$enable-shadows: true;    // Enable or disable shadows
+$input-btn-focus-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); // Focus shadow color for form elements
+
+// Customize selection color
+$enable-caret: true;      // Enable or disable carets
+$caret-width-base: 0.3em; // Caret width
+$caret-color: #316CC4;    // Caret color
+
+// Customize button colors
+$btn-primary-color: #fff;           // Text color for primary buttons
+$btn-primary-bg: #28589F;           // Background color for primary buttons
+$btn-secondary-color: #329EE2;         // Text color for secondary buttons
+$btn-secondary-bg: #fff;         // Background color for secondary buttons
+$btn-success-color: #fff;           // Text color for success buttons
+$btn-success-bg: #008800;           // Background color for success buttons
+$btn-info-color: #fff;              // Text color for info buttons
+$btn-info-bg: #17A2B8;              // Background color for info buttons
+$btn-warning-color: #212529;        // Text color for warning buttons
+$btn-warning-bg: #FF9800;           // Background color for warning buttons
+$btn-danger-color: #fff;            // Text color for danger buttons
+$btn-danger-bg: #B00020;            // Background color for danger buttons
+
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.text-secondary{
+  letter-spacing: 0.26px;
+}
+
+

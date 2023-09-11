@@ -1,0 +1,36 @@
+.header {
+  width: 99.5%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-radius: 5px;
+
+  &__icon {
+    img {
+      height: 3em;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 0rem;
+
+    button{
+      min-width: 0.75em;
+    }
+
+    mat-icon {
+      color: #FFFFFF;
+      font-size: 30px;
+    }
+  }
+}
+
+
+.mobile-menu--icon {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}

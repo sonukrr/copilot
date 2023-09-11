@@ -1,0 +1,33 @@
+<!-- for 4xx error -->
+<div class="container-fluid ">
+  <div class="row justify-content-md-center">
+    <div class="col-12">
+      <section  *ngIf="type == ''">
+        <img src="assets/img/not-found/404.svg" alt="" srcset="">
+        <h2>Page Not Found</h2>
+        <p class="dark-secondary-text">We couldnt find the page you are looking for</p>
+        <button mat-stroked-button color="primary" class="primary mx-3" >GO BACK</button>
+        <button mat-button mat-flat-button color="primary" >GO TO DASHBOARD</button>
+      </section>
+      <section *ngIf="type == 'dataNotFound'">
+        <img src="assets/img/not-found/Data_Not_Found.svg" alt="" srcset="">
+        <h2 class="mt-2">No data found</h2>
+        <p class="dark-secondary-text">{{message || 'No data is available.'}}</p>
+        <!-- <button mat-raised-button class="mx-3" >GO BACK</button> -->
+        <!-- <button mat-button mat-raised-button color="primary" >GO TO DASHBOARD</button> -->
+      </section>
+      <section *ngIf="type == 'noSearchResult'">
+        <img src="assets/img/not-found/No_Search_Result.svg" alt="" srcset="">
+        <h2>Sorry, no results found</h2>
+        <p class="dark-secondary-text ">We couldn’t find what you have searched for.<br>
+          Please check for spelling errors and try searching again</p>
+        <!-- <p class="dark-secondary-text pt-0"></p> -->
+
+        <!-- <button mat-raised-button class="mx-3" >GO BACK</button>
+        <button mat-button mat-raised-button color="primary" >GO TO DASHBOARD</button> -->
+      </section>
+    </div>
+  </div>
+</div>
+
+
