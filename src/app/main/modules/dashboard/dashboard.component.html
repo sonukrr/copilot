@@ -1,1 +1,25 @@
-<p>dashboard works!</p>
+<div class="container-fluid" [appLoading]="isLoading" [fixedLoader]="true">
+
+    <div class="row">
+        <div class="col-12">
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Ask Questions</mat-label>
+                <textarea [readonly]="disabled"  [(ngModel)]='query' rows="10" cols="50" matInput placeholder="Who is Virat Kohli?"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button mat-raised-button (click)="submit()" color="primary">Generate</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Response</mat-label>
+                <textarea readonly [(ngModel)]="dummyResp2" matInput placeholder="Chatgpt Response will come here" rows="10" cols="50"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+
+</div>

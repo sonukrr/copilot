@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Account } from 'src/app/shared/models/account.model';
@@ -47,6 +47,33 @@ export class DataService {
 
   setServerHost() {
     this.SERVER_HOST = this.appService.API_URL;
+  }
+
+
+
+
+  private apiUrl = 'https://api.openai.com/v1/chat/completions';
+  private apiKey = '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'; 
+
+
+  chat(query: string): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${this.apiKey}`,
+    });
+
+    // const data = {
+    //   "model": "gpt-3.5-turbo",
+    //   "messages": [{"role": "user", "content": "who is virat kohli"}],
+    //   "temperature": 0.7
+    // }
+
+    const data = {
+      messages: [{ role: "system", content: query }],
+      model: "gpt-3.5-turbo",
+    }
+
+    return this.http.post(this.apiUrl, data, { headers });
   }
 
 

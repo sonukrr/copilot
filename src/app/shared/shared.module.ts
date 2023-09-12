@@ -20,7 +20,7 @@ import { DraggableDialogDirective } from './directives/draggable-dialog.directiv
 import { StartRatingComponent } from './components/start-rating/start-rating.component';
 import { SampleComponentComponent } from './components/sample-component/sample-component.component';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
-import { TranslateModule } from '@ngx-translate/core';
+// import { TranslateModule } from '@ngx-translate/core';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 // import { CamelCaseToTitleCasePipe } from './pipes/camel-case-to-title-case.pipe';
 // import { DateFormatPipe } from './pipes/date-format.pipe';
@@ -56,7 +56,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    TranslateModule,
+    // TranslateModule,
     NgxSkeletonLoaderModule
 
   ],
@@ -74,7 +74,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     StartRatingComponent,
     SampleComponentComponent,
     TimeAgoPipe,
-    TranslateModule,
+    // TranslateModule,
     FilterPipe,
     NgxSkeletonLoaderModule
   ]
