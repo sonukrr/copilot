@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { DataService } from '../../services/data.service';
 import { AppService } from '../../services/app.service';
+import { DataStoreService } from '../../services/data-store.service';
+import { Job } from '../../models/job';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,11 +19,14 @@ export class DashboardComponent implements OnInit {
   dummyResp2:string = ''
   constructor(
     private dataService: DataService,
-    private appService: AppService
+    private appService: AppService,
+    public dataStoreService: DataStoreService
   ) {
   }
 
   ngOnInit(): void {
+    // SK- loads all data to dataStore service varaibles from json Db
+    this.dataStoreService.loadDataFromDb();
 
     // this.dataService.chat("How are you?").subscribe({next : (res:any)=>{
     //   console.log(res)
@@ -41,7 +46,7 @@ export class DashboardComponent implements OnInit {
     },error : (err:any) =>{
       console.log(err)
     }})
-    
+
   }
 
 

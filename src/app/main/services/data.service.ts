@@ -34,11 +34,11 @@ export class DataService {
 }
 
   public accountValue(): Account {
-    return this.accountSubject.getValue(); 
+    return this.accountSubject.getValue();
   }
 
   public companyConfigValue(): Account {
-    return this.companyConfigSubject.getValue(); 
+    return this.companyConfigSubject.getValue();
   }
 
   public userValue(): any {
@@ -53,7 +53,7 @@ export class DataService {
 
 
   private apiUrl = 'https://api.openai.com/v1/chat/completions';
-  private apiKey = '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'; 
+  private apiKey = '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';
 
 
   chat(query: string): Observable<any> {

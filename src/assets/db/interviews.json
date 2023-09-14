@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "dateTime": "Thu Sep 14 2023 09:20:20 GMT+0530 (India Standard Time)",
+    "status": "Pending",
+    "provider": "MS Teams",
+    "meetingUrl": "https://teams.microsoft.com/meeting/1",
+    "videoAndTranscriptUrl": "https://example.com/video/1",
+    "metaData": {
+      "jobId": 1,
+      "candidateId": 1,
+      "feedbacks": {
+        "interviewerFeedbackId": 1,
+        "candidateFeedbackId": 1
+      }
+    }
+  },
+  {
+    "id": 2,
+    "dateTime": "Mon Sep 18 2023 14:30:00 GMT+0530 (India Standard Time)",
+    "status": "Due",
+    "provider": "Google Meet",
+    "meetingUrl": "https://meet.google.com/2",
+    "videoAndTranscriptUrl": "https://example.com/video/2",
+    "metaData": {
+      "jobId": 2,
+      "candidateId": 2,
+      "feedbacks": {
+        "interviewerFeedbackId": 2,
+        "candidateFeedbackId": 2
+      }
+    }
+  },
+  {
+    "id": 3,
+    "dateTime": "Wed Sep 20 2023 11:45:00 GMT+0530 (India Standard Time)",
+    "status": "Due",
+    "provider": "Zoom",
+    "meetingUrl": "https://zoom.us/meeting/3",
+    "videoAndTranscriptUrl": "https://example.com/video/3",
+    "metaData": {
+      "jobId": 3,
+      "candidateId": 3,
+      "feedbacks": {
+        "interviewerFeedbackId": 3,
+        "candidateFeedbackId": 3
+      }
+    }
+  },
+  {
+    "id": 4,
+    "dateTime": "Fri Sep 22 2023 10:15:00 GMT+0530 (India Standard Time)",
+    "status": "Due",
+    "provider": "MS Teams",
+    "meetingUrl": "https://teams.microsoft.com/meeting/4",
+    "videoAndTranscriptUrl": "https://example.com/video/4",
+    "metaData": {
+      "jobId": 4,
+      "candidateId": 4,
+      "feedbacks": {
+        "interviewerFeedbackId": 4,
+        "candidateFeedbackId": 4
+      }
+    }
+  },
+  {
+    "id": 5,
+    "dateTime": "Tue Sep 26 2023 13:00:00 GMT+0530 (India Standard Time)",
+    "status": "Due",
+    "provider": "Google Meet",
+    "meetingUrl": "https://meet.google.com/5",
+    "videoAndTranscriptUrl": "https://example.com/video/5",
+    "metaData": {
+      "jobId": 5,
+      "candidateId": 5,
+      "feedbacks": {
+        "interviewerFeedbackId": 5,
+        "candidateFeedbackId": 5
+      }
+    }
+  },
+  {
+    "id": 6,
+    "dateTime": "Thu Sep 28 2023 09:45:00 GMT+0530 (India Standard Time)",
+    "status": "Due",
+    "provider": "Zoom",
+    "meetingUrl": "https://zoom.us/meeting/6",
+    "videoAndTranscriptUrl": "https://example.com/video/6",
+    "metaData": {
+      "jobId": 6,
+      "candidateId": 6,
+      "feedbacks": {
+        "interviewerFeedbackId": 6,
+        "candidateFeedbackId": 6
+      }
+    }
+  },
+  {
+    "id": 7,
+    "dateTime": "Mon Sep 11 2023 14:30:00 GMT+0530 (India Standard Time)",
+    "status": "Completed",
+    "provider": "MS Teams",
+    "meetingUrl": "https://teams.microsoft.com/meeting/7",
+    "videoAndTranscriptUrl": "https://example.com/video/7",
+    "metaData": {
+      "jobId": 7,
+      "candidateId": 7,
+      "feedbacks": {
+        "interviewerFeedbackId": 7,
+        "candidateFeedbackId": 7
+      }
+    }
+  },
+  {
+    "id": 8,
+    "dateTime": "Wed Sep 13 2023 11:45:00 GMT+0530 (India Standard Time)",
+    "status": "Completed",
+    "provider": "Google Meet",
+    "meetingUrl": "https://meet.google.com/8",
+    "videoAndTranscriptUrl": "https://example.com/video/8",
+    "metaData": {
+      "jobId": 8,
+      "candidateId": 8,
+      "feedbacks": {
+        "interviewerFeedbackId": 8,
+        "candidateFeedbackId": 8
+      }
+    }
+  },
+  {
+    "id": 9,
+    "dateTime": "Fri Sep 15 2023 10:15:00 GMT+0530 (India Standard Time)",
+    "status": "Completed",
+    "provider": "Zoom",
+    "meetingUrl": "https://zoom.us/meeting/9",
+    "videoAndTranscriptUrl": "https://example.com/video/9",
+    "metaData": {
+      "jobId": 9,
+      "candidateId": 9,
+      "feedbacks": {
+        "interviewerFeedbackId": 9,
+        "candidateFeedbackId": 9
+      }
+    }
+  },
+  {
+    "id": 10,
+    "dateTime": "Tue Sep 19 2023 13:00:00 GMT+0530 (India Standard Time)",
+    "status": "Completed",
+    "provider": "MS Teams",
+    "meetingUrl": "https://teams.microsoft.com/meeting/10",
+    "videoAndTranscriptUrl": "https://example.com/video/10",
+    "metaData": {
+      "jobId": 10,
+      "candidateId": 10,
+      "feedbacks": {
+        "interviewerFeedbackId": 10,
+        "candidateFeedbackId": 10
+      }
+    }
+  }
+]

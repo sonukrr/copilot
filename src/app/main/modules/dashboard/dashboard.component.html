@@ -1,3 +1,58 @@
+<div class="px-4 py-2">
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+    <mat-tab label="Home">
+
+        <div class="row w-100">
+          <div class="col-4 profile-display-container position-relative">
+            <div class="col-12">
+              <img class="profile__basic__avatar shadow" src="assets/profile-pic.jpg">
+            </div>
+            <div class="col-12 fw-bold">
+              <h3>Hello, Samuel</h3>
+            </div>
+
+            <mat-divider [vertical]="true" class="zm-v-divider"></mat-divider>
+
+          </div>
+
+          <div class="col-4 position-relative">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laboriosam id accusantium tempora dolorem
+            libero blanditiis corporis quisquam, quibusdam reprehenderit. Qui necessitatibus quo eius velit odit placeat totam
+            explicabo obcaecati!
+
+            <mat-divider [vertical]="true" class="zm-v-divider"></mat-divider>
+
+          </div>
+
+          <div class="col-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laboriosam id accusantium tempora dolorem
+            libero blanditiis corporis quisquam, quibusdam reprehenderit. Qui necessitatibus quo eius velit odit placeat totam
+            explicabo obcaecati!
+
+
+          </div>
+
+        </div>
+
+    </mat-tab>
+    <mat-tab label="Second">Content 2</mat-tab>
+    <mat-tab label="Third">Content 3</mat-tab>
+  </mat-tab-group>
+</div>
+
+<h1>Jobs:</h1>
+{{dataStoreService.jobs| json}}
+
+<h1>Candidates</h1>
+{{dataStoreService.candidates| json}}
+
+<h1>Interviews</h1>
+{{dataStoreService.interviews| json}}
+
+
+
+
+
 <div class="container-fluid" [appLoading]="isLoading" [fixedLoader]="true">
 
     <div class="row">

@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Software Engineer",
+    "location": "San Francisco, CA",
+    "description": "Develop and maintain software applications. Collaborate with cross-functional teams to deliver high-quality software products.",
+    "rolesAndResp": "Write efficient and maintainable code, participate in code reviews, debug and troubleshoot software issues, and contribute to software architecture discussions.",
+    "mandatorySkills": ["Java", "Python", "SQL"],
+    "desirableSkills": ["JavaScript", "React", "Docker"],
+    "designation": "Engineer I",
+    "exp": {
+      "min": "1 year",
+      "max": "5 years"
+    },
+    "evaluationCriteria": "Coding test, technical interview",
+    "skillsToBEEvaluatedOn": "Coding skills, problem-solving",
+    "metaData": {
+      "candidateIds": [],
+      "jobQuestionareIds": []
+    }
+  },
+  {
+    "id": 2,
+    "title": "Data Scientist",
+    "location": "New York, NY",
+    "description": "Analyze data to extract valuable insights, build predictive models, and drive data-driven decision-making.",
+    "rolesAndResp": "Collect and preprocess data, apply statistical analysis and machine learning techniques, create data visualizations, and communicate findings to stakeholders.",
+    "mandatorySkills": ["Python", "Machine Learning", "Statistics"],
+    "desirableSkills": ["TensorFlow", "Tableau", "Big Data"],
+    "designation": "Data Scientist I",
+    "exp": {
+      "min": "2 years",
+      "max": "7 years"
+    },
+    "evaluationCriteria": "Data analysis challenge, technical interview",
+    "skillsToBEEvaluatedOn": "Data analysis, modeling",
+    "metaData": {
+      "candidateIds": [],
+      "jobQuestionareIds": []
+    }
+  },
+  {
+    "id": 3,
+    "title": "Network Engineer",
+    "location": "Dallas, TX",
+    "description": "Design, implement, and maintain network infrastructure to ensure secure and reliable data communication.",
+    "rolesAndResp": "Configure routers, switches, and firewalls, monitor network performance, troubleshoot connectivity issues, and implement security measures.",
+    "mandatorySkills": ["Cisco", "Routing Protocols", "Firewalls"],
+    "desirableSkills": ["CCNA", "SDN", "Wireless Networking"],
+    "designation": "Network Engineer I",
+    "exp": {
+      "min": "3 years",
+      "max": "8 years"
+    },
+    "evaluationCriteria": "Network configuration task, technical interview",
+    "skillsToBEEvaluatedOn": "Network design, troubleshooting",
+    "metaData": {
+      "candidateIds": [],
+      "jobQuestionareIds": []
+    }
+  },
+  {
+    "id": 4,
+    "title": "DevOps Engineer",
+    "location": "Seattle, WA",
+    "description": "Automate and streamline development and operations processes to accelerate software delivery and enhance system reliability.",
+    "rolesAndResp": "Set up and maintain CI/CD pipelines, manage infrastructure as code, and containerize applications for deployment.",
+    "mandatorySkills": ["Docker", "Kubernetes", "Jenkins"],
+    "desirableSkills": ["Terraform", "AWS", "Scripting (e.g., Bash, Python)"],
+    "designation": "DevOps Engineer I",
+    "exp": {
+      "min": "2 years",
+      "max": "6 years"
+    },
+    "evaluationCriteria": "DevOps task, technical interview",
+    "skillsToBEEvaluatedOn": "Automation, infrastructure management",
+    "metaData": {
+      "candidateIds": [],
+      "jobQuestionareIds": []
+    }
+  },
+  {
+    "id": 5,
+    "title": "Frontend Developer",
+    "location": "Los Angeles, CA",
+    "description": "Create user-friendly web interfaces and applications that provide an exceptional user experience.",
+    "rolesAndResp": "Write clean HTML/CSS code, collaborate with UI/UX designers, develop frontend components, and ensure cross-browser compatibility.",
+    "mandatorySkills": ["HTML", "CSS", "JavaScript"],
+    "desirableSkills": ["React", "Angular", "Vue.js"],
+    "designation": "Developer I",
+    "exp": {
+      "min": "1 year",
+      "max": "5 years"
+    },
+    "evaluationCriteria": "Frontend coding test, UI design review",
+    "skillsToBEEvaluatedOn": "Frontend development, UI/UX",
+    "metaData": {
+      "candidateIds": [],
+      "jobQuestionareIds": []
+    }
+  },
+  {
+    "id": 6,
+    "title": "Cybersecurity Analyst",
+    "location": "Chicago, IL",
+    "description": "Protect an organization's systems and data from security threats and breaches.",
+    "rolesAndResp": "Monitor security alerts, investigate and respond to incidents, conduct vulnerability assessments, and ensure compliance with security policies.",
+    "mandatorySkills": ["SIEM", "Firewall Management", "Security Protocols"],
+    "desirableSkills": ["Certifications (e.g., CISSP, CISM)", "Penetration Testing", "Security Auditing"],
+    "designation": "Analyst I",
+    "exp": {
+      "min": "2 years",
+      "max": "6 years"
+    },
+    "evaluationCriteria": "Security assessment, security incident simulation",
+    "skillsToBEEvaluatedOn": "Security analysis, threat detection",
+    "metaData": {
+      "candidateIds": [],
+      "jobQuestionareIds": []
+    }
+  },
+  {
+    "id": 7,
+    "title": "Cloud Solutions Architect",
+    "location": "Austin, TX",
+    "description": "Design and implement scalable and secure cloud-based solutions for clients to optimize their operations and achieve business goals.",
+    "rolesAndResp": "Create cloud architectures, provide technical guidance to clients, and ensure cloud services are aligned with business objectives.",
+    "mandatorySkills": ["AWS", "Azure", "Google Cloud", "Cloud Security"],
+    "desirableSkills": ["Certifications (e.g., AWS Solutions Architect)", "Serverless Computing", "Containers"],
+    "designation": "Architect I",
+    "exp": {
+      "min": "4 years",
+      "max": "10 years"
+    },
+    "evaluationCriteria": "Solution architecture presentation, technical interview",
+    "skillsToBEEvaluatedOn": "Cloud architecture, client interaction",
+    "metaData": {
+      "candidateIds": [],
+      "jobQuestionareIds": []
+    }
+  },
+  {
+    "id": 8,
+    "title": "Database Administrator",
+    "location": "Denver, CO",
+    "description": "Manage and optimize databases to ensure efficient data storage, retrieval, and integrity.",
+    "rolesAndResp": "Administer database systems, perform data backups and restores, monitor database performance, and implement security measures.",
+    "mandatorySkills": ["SQL", "Database Management Systems", "Backup and Recovery"],
+    "desirableSkills": ["Oracle", "MongoDB", "Database Security"],
+    "designation": "Administrator I",
+    "exp": {
+      "min": "3 years",
+      "max": "8 years"
+    },
+    "evaluationCriteria": "Database management task, database performance assessment",
+    "skillsToBEEvaluatedOn": "Database administration, optimization",
+    "metaData": {
+      "candidateIds": [],
+      "jobQuestionareIds": []
+    }
+  },
+  {
+    "id": 9,
+    "title": "AI/ML Engineer",
+    "location": "San Jose, CA",
+    "description": "Develop and implement machine learning and artificial intelligence solutions to solve complex business problems.",
+    "rolesAndResp": "Collect and preprocess data, build and train machine learning models, evaluate model performance, and deploy AI solutions.",
+    "mandatorySkills": ["Python", "Machine Learning", "Deep Learning"],
+    "desirableSkills": ["TensorFlow", "PyTorch", "Natural Language Processing"],
+    "designation": "Engineer I",
+    "exp": {
+      "min": "2 years",
+      "max": "7 years"
+    },
+    "evaluationCriteria": "Machine learning task, technical interview",
+    "skillsToBEEvaluatedOn": "Machine learning, problem-solving",
+    "metaData": {
+      "candidateIds": [],
+      "jobQuestionareIds": []
+    }
+  },
+  {
+    "id": 10,
+    "title": "Blockchain Developer",
+    "location": "Miami, FL",
+    "description": "Design and develop blockchain-based solutions for various industries, including finance, supply chain, and healthcare.",
+    "rolesAndResp": "Write smart contracts, build decentralized applications (DApps), and ensure the security and scalability of blockchain networks.",
+    "mandatorySkills": ["Blockchain Platforms (e.g., Ethereum, Binance Smart Chain)", "Smart Contract Development", "Blockchain Security"],
+    "desirableSkills": ["Solidity", "Web3.js", "DApp Development"],
+    "designation": "Developer I",
+    "exp": {
+      "min": "2 years",
+      "max": "6 years"
+    },
+    "evaluationCriteria": "Blockchain development task, technical interview",
+    "skillsToBEEvaluatedOn": "Blockchain development, smart contract coding",
+    "metaData": {
+      "candidateIds": [],
+      "jobQuestionareIds": []
+    }
+  }
+]

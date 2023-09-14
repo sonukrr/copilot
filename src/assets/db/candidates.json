@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "designation": "Software Engineer",
+    "company": "Google",
+    "exp": {
+      "min": "4 years",
+      "max": "7 years"
+    },
+    "location": "Mountain View, CA",
+    "ctc": "$130,000",
+    "email": "johndoe@gmail.com",
+    "phoneNo": "+1 123-456-7890",
+    "profilePicUrl": "assets/candidateAvatars/1.jpg",
+    "education": [
+      {
+        "fromYear": "2011",
+        "toYear": "2015",
+        "institute": "Stanford University",
+        "course": "Computer Science"
+      }
+    ],
+    "keySkills": ["Java", "Python", "SQL"],
+    "mayAlsoKnow": ["JavaScript", "React", "Docker"],
+    "socialProfiles": {
+      "linkedInUrl": "https://www.linkedin.com/in/johndoe/",
+      "gitHubUrl": "https://github.com/johndoe",
+      "webPortfolioUrl": "https://johndoeportfolio.com"
+    },
+    "metaData": {
+      "jobId": 1,
+      "fitAnalysis": {
+        "expScore": "9.0",
+        "skillsScore": "8.5",
+        "educationScore": "8.2",
+        "overallFitScore": "8.6"
+      },
+      "interviewId": 1
+    }
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "designation": "Data Scientist",
+    "company": "Amazon",
+    "exp": {
+      "min": "5 years",
+      "max": "9 years"
+    },
+    "location": "Seattle, WA",
+    "ctc": "$140,000",
+    "email": "janesmith@yahoo.com",
+    "phoneNo": "+1 234-567-8901",
+    "profilePicUrl": "assets/candidateAvatars/2.jpg",
+    "education": [
+      {
+        "fromYear": "2010",
+        "toYear": "2014",
+        "institute": "Harvard University",
+        "course": "Data Science"
+      }
+    ],
+    "keySkills": ["Python", "Machine Learning", "Statistics"],
+    "mayAlsoKnow": ["TensorFlow", "Tableau", "Big Data"],
+    "socialProfiles": {
+      "linkedInUrl": "https://www.linkedin.com/in/janesmith/",
+      "gitHubUrl": "https://github.com/janesmith",
+      "webPortfolioUrl": "https://janesmithportfolio.com"
+    },
+    "metaData": {
+      "jobId": 2,
+      "fitAnalysis": {
+        "expScore": "8.8",
+        "skillsScore": "9.2",
+        "educationScore": "8.7",
+        "overallFitScore": "8.9"
+      },
+      "interviewId": 2
+    }
+  },
+  {
+    "id": 3,
+    "name": "Michael Johnson",
+    "designation": "Network Engineer",
+    "company": "Cisco",
+    "exp": {
+      "min": "6 years",
+      "max": "10 years"
+    },
+    "location": "San Jose, CA",
+    "ctc": "$125,000",
+    "email": "michaeljohnson@gmail.com",
+    "phoneNo": "+1 345-678-9012",
+    "profilePicUrl": "assets/candidateAvatars/3.jpg",
+    "education": [
+      {
+        "fromYear": "2009",
+        "toYear": "2013",
+        "institute": "MIT",
+        "course": "Computer Networking"
+      }
+    ],
+    "keySkills": ["Cisco", "Routing Protocols", "Firewalls"],
+    "mayAlsoKnow": ["CCNA", "SDN", "Wireless Networking"],
+    "socialProfiles": {
+      "linkedInUrl": "https://www.linkedin.com/in/michaeljohnson/",
+      "gitHubUrl": "https://github.com/michaeljohnson",
+      "webPortfolioUrl": "https://michaeljohnsonportfolio.com"
+    },
+    "metaData": {
+      "jobId": 3,
+      "fitAnalysis": {
+        "expScore": "8.5",
+        "skillsScore": "8.7",
+        "educationScore": "8.0",
+        "overallFitScore": "8.4"
+      },
+      "interviewId": 3
+    }
+  },
+  {
+    "id": 4,
+    "name": "Emily Davis",
+    "designation": "DevOps Engineer",
+    "company": "Microsoft",
+    "exp": {
+      "min": "3 years",
+      "max": "6 years"
+    },
+    "location": "Redmond, WA",
+    "ctc": "$120,000",
+    "email": "emilydavis@hotmail.com",
+    "phoneNo": "+1 456-789-0123",
+    "profilePicUrl": "assets/candidateAvatars/4.jpg",
+    "education": [
+      {
+        "fromYear": "2012",
+        "toYear": "2016",
+        "institute": "UC Berkeley",
+        "course": "Computer Engineering"
+      }
+    ],
+    "keySkills": ["Docker", "Kubernetes", "Jenkins"],
+    "mayAlsoKnow": ["Terraform", "AWS", "Scripting (e.g., Bash, Python)"],
+    "socialProfiles": {
+      "linkedInUrl": "https://www.linkedin.com/in/emilydavis/",
+      "gitHubUrl": "https://github.com/emilydavis",
+      "webPortfolioUrl": "https://emilydavisportfolio.com"
+    },
+    "metaData": {
+      "jobId": 4,
+      "fitAnalysis": {
+        "expScore": "8.0",
+        "skillsScore": "8.8",
+        "educationScore": "7.5",
+        "overallFitScore": "8.1"
+      },
+      "interviewId": 4
+    }
+  },
+  {
+    "id": 5,
+    "name": "Michaela White",
+    "designation": "Frontend Developer",
+    "company": "Apple",
+    "exp": {
+      "min": "4 years",
+      "max": "8 years"
+    },
+    "location": "Cupertino, CA",
+    "ctc": "$130,000",
+    "email": "michaelawhite@gmail.com",
+    "phoneNo": "+1 567-890-1234",
+    "profilePicUrl": "assets/candidateAvatars/5.jpg",
+    "education": [
+      {
+        "fromYear": "2013",
+        "toYear": "2017",
+        "institute": "Caltech",
+        "course": "Computer Science"
+      }
+    ],
+    "keySkills": ["HTML", "CSS", "JavaScript"],
+    "mayAlsoKnow": ["React", "Vue.js", "UI/UX Design"],
+    "socialProfiles": {
+      "linkedInUrl": "https://www.linkedin.com/in/michaelawhite/",
+      "gitHubUrl": "https://github.com/michaelawhite",
+      "webPortfolioUrl": "https://michaelawhiteportfolio.com"
+    },
+    "metaData": {
+      "jobId": 5,
+      "fitAnalysis": {
+        "expScore": "8.6",
+        "skillsScore": "8.9",
+        "educationScore": "8.2",
+        "overallFitScore": "8.6"
+      },
+      "interviewId": 5
+    }
+  },
+  {
+    "id": 6,
+    "name": "David Wilson",
+    "designation": "Database Administrator",
+    "company": "Oracle",
+    "exp": {
+      "min": "5 years",
+      "max": "9 years"
+    },
+    "location": "Redwood City, CA",
+    "ctc": "$140,000",
+    "email": "davidwilson@gmail.com",
+    "phoneNo": "+1 678-901-2345",
+    "profilePicUrl": "assets/candidateAvatars/6.jpg",
+    "education": [
+      {
+        "fromYear": "2011",
+        "toYear": "2015",
+        "institute": "MIT",
+        "course": "Database Management"
+      }
+    ],
+    "keySkills": ["Oracle", "SQL Server", "Database Performance Tuning"],
+    "mayAlsoKnow": ["MongoDB", "Database Security", "ETL"],
+    "socialProfiles": {
+      "linkedInUrl": "https://www.linkedin.com/in/davidwilson/",
+      "gitHubUrl": "https://github.com/davidwilson",
+      "webPortfolioUrl": "https://davidwilsonportfolio.com"
+    },
+    "metaData": {
+      "jobId": 6,
+      "fitAnalysis": {
+        "expScore": "8.8",
+        "skillsScore": "8.5",
+        "educationScore": "8.3",
+        "overallFitScore": "8.6"
+      },
+      "interviewId": 6
+    }
+  },
+  {
+    "id": 7,
+    "name": "Sara Patel",
+    "designation": "AI/ML Engineer",
+    "company": "Facebook",
+    "exp": {
+      "min": "4 years",
+      "max": "7 years"
+    },
+    "location": "Menlo Park, CA",
+    "ctc": "$135,000",
+    "email": "sarapatel@gmail.com",
+    "phoneNo": "+1 789-012-3456",
+    "profilePicUrl": "assets/candidateAvatars/7.jpg",
+    "education": [
+      {
+        "fromYear": "2012",
+        "toYear": "2016",
+        "institute": "Stanford University",
+        "course": "Machine Learning"
+      }
+    ],
+    "keySkills": ["Python", "Machine Learning", "Deep Learning"],
+    "mayAlsoKnow": ["TensorFlow", "PyTorch", "Natural Language Processing"],
+    "socialProfiles": {
+      "linkedInUrl": "https://www.linkedin.com/in/sarapatel/",
+      "gitHubUrl": "https://github.com/sarapatel",
+      "webPortfolioUrl": "https://sarapatelportfolio.com"
+    },
+    "metaData": {
+      "jobId": 9,
+      "fitAnalysis": {
+        "expScore": "9.2",
+        "skillsScore": "8.9",
+        "educationScore": "8.5",
+        "overallFitScore": "9.0"
+      },
+      "interviewId": 9
+    }
+  },
+  {
+    "id": 8,
+    "name": "Daniel Lee",
+    "designation": "Blockchain Developer",
+    "company": "IBM",
+    "exp": {
+      "min": "3 years",
+      "max": "6 years"
+    },
+    "location": "Armonk, NY",
+    "ctc": "$120,000",
+    "email": "daniellee@gmail.com",
+    "phoneNo": "+1 890-123-4567",
+    "profilePicUrl": "assets/candidateAvatars/8.jpg",
+    "education": [
+      {
+        "fromYear": "2013",
+        "toYear": "2017",
+        "institute": "Columbia University",
+        "course": "Blockchain Development"
+      }
+    ],
+    "keySkills": ["Ethereum", "Smart Contract Development", "Solidity"],
+    "mayAlsoKnow": ["Hyperledger Fabric", "Web3.js", "DApp Development"],
+    "socialProfiles": {
+      "linkedInUrl": "https://www.linkedin.com/in/daniellee/",
+      "gitHubUrl": "https://github.com/daniellee",
+      "webPortfolioUrl": "https://danielleeportfolio.com"
+    },
+    "metaData": {
+      "jobId": 10,
+      "fitAnalysis": {
+        "expScore": "8.5",
+        "skillsScore": "8.7",
+        "educationScore": "8.0",
+        "overallFitScore": "8.4"
+      },
+      "interviewId": 10
+    }
+  }
+]
