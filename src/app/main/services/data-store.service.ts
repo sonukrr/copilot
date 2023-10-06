@@ -13,8 +13,6 @@ export class DataStoreService implements OnInit {
   public candidates: Candidate[];
   public interviews: Interview[];
 
-
-
   constructor(private dbQueryService: DbQueryService) {
   }
 
@@ -34,19 +32,6 @@ export class DataStoreService implements OnInit {
     this.dbQueryService.getInterviews().subscribe((data) => {
       this.interviews = data;
     });
-
-
-    // this.dbQueryService.getJobs().subscribe((data) => {
-    //   this.jobs = data;
-    // });
-
-    // this.dbQueryService.getJobs().subscribe((data) => {
-    //   this.jobs = data;
-    // });
-
-    // this.dbQueryService.getJobs().subscribe((data) => {
-    //   this.jobs = data;
-    // });
   }
 
 
