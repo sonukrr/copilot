@@ -107,6 +107,66 @@ export class DataService {
 
   //   return this.http.post(this.apiUrl, data, { headers });
   // }
-  
+
+  getCandidateEvaluationPriorToINterview(job: any, cand: any){
+
+    var query = `evaluate this candidate based on roles and responsibilities and job description provided in less than 300 characters and specifically highlight strngth and weaknesses.\n\ncandidate details - \n ${JSON.stringify(cand)}
+      \n\nJob details - \n ${JSON.stringify(job)}`;
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${this.apiKey}`,
+    });
+
+    // const data = {
+    //   "model": "gpt-3.5-turbo",
+    //   "messages": [{"role": "user", "content": "who is virat kohli"}],
+    //   "temperature": 0.7
+    // }
+
+    const data = {
+      messages: [{ role: "system", content: query }],
+      model: "gpt-3.5-turbo",
+    }
+
+    return this.http.post(this.apiUrl, data, { headers });
+
+
+
+  }
+
+  getDetailedCandidateEvaluationPriorToINterview(isFirst: boolean){
+    var query = "";
+    if(isFirst){
+     query += `now provide the detailed analysis`;
+
+    }else{
+      query += `draft this in comparison with roles and responsibilities from both job and cv`;
+
+    }
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${this.apiKey}`,
+    });
+
+    // const data = {
+    //   "model": "gpt-3.5-turbo",
+    //   "messages": [{"role": "user", "content": "who is virat kohli"}],
+    //   "temperature": 0.7
+    // }
+
+    const data = {
+      messages: [{ role: "system", content: query }],
+      model: "gpt-3.5-turbo",
+    }
+
+    return this.http.post(this.apiUrl, data, { headers });
+
+
+
+  }
+
+
 
 }
