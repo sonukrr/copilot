@@ -1,0 +1,280 @@
+<div class="container-fluid">
+    <ng-container *ngIf="!isClicked; else clicked">
+        <div class="cards border rounded mt-2 mx-3 my-3" *ngFor="let data of allResponse?.jobs">
+            <div class="row mt-3">
+                <!-- first column -->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 align-middle">
+                    <div class="row">
+                        <div class="row d-flex align-items-center justify-content-center" style="height: 250px;">
+                            <div class="col-2 d-none d-md-block"></div>
+                            <div class="col-8 col-md-8">
+                                <h5 class="ms-3">{{data.title}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- first column ends -->
+        
+                <!-- second column -->
+                <div class="col-12 col-sm-12 col-md-12  col-lg-12 col-xl-5">
+                    <div class="row">
+                        <p><strong>Job Evaluation Criteria :</strong> </p>
+                        <p>{{data.description}}</p>
+                        <!-- icon row -->
+                        <div class="col-12">
+                            <span
+                                class="borders d-flex justify-content-between justify-content-md-center mt-3">
+                                <span class="mx-0 mx-md-3 mt-2 d-flex">
+                                    <mat-icon class="material-symbols-rounded mx-2 ">location_on</mat-icon>
+                                    <span
+                                        class="mb-2 secondary-font">{{data.location}}</span>
+                                </span>
+                                <span class=" d-flex mt-2 mx-0 mx-md-3">
+                                    <mat-icon class="material-symbols-outlined mx-2">
+                                        account_circle
+                                    </mat-icon>
+                                    <span
+                                        class="mb-2 secondary-font">{{data.designation}}</span>
+                                </span>
+                                <span class=" d-flex mt-2 mx-0 mx-md-3">
+                                    <mat-icon class="material-symbols-outlined mx-2">
+                                        work
+                                    </mat-icon>
+                                    <span
+                                        class="mb-2 secondary-font">{{data.exp.min}} - {{data.exp.max}} Years</span>
+                                </span>
+                            </span>
+                        </div>
+                        <!-- icon row ends -->
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <p class="secondary-font zm-font-weight-600">Skills Required : </p>
+                            <p class="secondary-font zm-font-weight-600">Roles & Responsibilities : </p>
+                        </div>
+                        <div class="col-8">
+                            <p class="secondary-font">{{data.mandatorySkills.join(" | ")}}</p>
+                            <p class="secondary-font">{{data.rolesAndResp}}</p>
+                        </div>
+                    </div>
+        
+                </div>
+                <!-- second columns ends -->
+        
+        
+                <!-- 4th column -->
+                <div class="col-12 col-sm-12 col-md-12  col-lg-12 col-xl-2">
+                    <div class="row d-flex align-items-center justify-content-center" style="height: 250px;">
+                        <span class="d-flex-row">
+                            <h6 class="ps-3">Total Interview Completed</h6>
+                            <span class="text-center">
+                                <h4 class="align-items-center">3/5</h4>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <!-- 4th column -->
+        
+                <!-- third column -->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
+                    <div class="row d-flex align-items-center justify-content-center" style="height: 250px;">
+                        <div class="col-8 col-md-8">
+                            <button (click)="selectJob(data.id)" class="mt-2 mb-sm-3 mb-3 me-3 px-3" mat-raised-button
+                                color="primary">GO TO JOB</button>
+                        </div>
+                    </div>
+        
+                </div>
+                <!-- third column ends -->
+        
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #clicked>
+        <!-- action header -->
+        <div class="row">
+            <div class="col-8 col-md-8">
+                <button (click)="goBack()" class="mt-2 mb-sm-3 mb-3 me-3 px-3" mat-raised-button
+                    color="primary">GO BACK JOB</button>
+            </div>
+            <div class="col-4">
+                <div class="row d-flex align-items-center justify-content-center">
+                    <span class="d-flex-row">
+                        <h5 class="ps-3">Total Interview Completed</h5>
+                        <span class="text-center">
+                            <h4 class="align-items-center">3/5</h4>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <h1>{{allResponse.jobs[selectedJobId-1].title}}</h1>
+
+        <!-- content -->
+        <div class="row">
+          <!-- job details -->
+            <!-- selection criteria -->
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <span class="d-flex-row">
+                            <p><strong>Job Evaluation Criteria :</strong> </p>
+                            <p>{{allResponse.jobs[selectedJobId-1].evaluationCriteria}}</p>
+                        </span>
+                    </div>
+                    <div class="col-3">
+                        <span class="d-flex-row">
+                            <p><strong>Experience :</strong> </p>
+                            <p>{{allResponse.jobs[selectedJobId-1].exp.min}} - {{allResponse.jobs[selectedJobId-1].exp.max}} Years</p>
+                        </span>
+                    </div>
+                    <div class="col"></div>
+                </div>
+
+            </div>
+
+            <!-- description -->
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <span class="d-flex-row">
+                            <p><strong>Job Description :</strong> </p>
+                            <p>{{allResponse.jobs[selectedJobId-1].description}}</p>
+                        </span>
+                    </div>
+                    <div class="col-3"></div>
+                    <div class="col"></div>
+                </div>
+            </div>
+
+            <!-- roles and resp -->
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <span class="d-flex-row">
+                            <p><strong>Roles & Responsibilities :</strong> </p>
+                            <p>{{allResponse.jobs[selectedJobId-1].rolesAndResp}}</p>
+                        </span>
+                    </div>
+                    <div class="col-3"></div>
+                    <div class="col"></div>
+                </div>
+            </div>
+
+            <!-- skills -->
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <span class="d-flex-row">
+                            <p><strong>Skills :</strong> </p>
+                            <p>{{allResponse.jobs[selectedJobId-1].mandatorySkills.join(" | ")}}</p>
+                        </span>
+                    </div>
+                    <div class="col-3"></div>
+                    <div class="col"></div>
+                </div>
+            </div>
+          <!-- job details ends -->
+
+          <!-- Interviews -->
+            <div class="col-12">
+                <div class="row">
+                    <!-- completed interview -->
+                    <div class="col-12 border">
+                        <div class="row">
+                            <div class="col-3">
+                                <p><strong>Interviews Completed</strong></p>
+                            </div>
+                            <div class="col-5"><p>3/5</p></div>
+                            <div class="col-2">
+                                <p><strong>total candidates</strong></p>
+                            </div>
+                            <div class="col-2">
+                                <p>5</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- upcoming interview -->
+                    <div class="col-12 border mt-3">
+                        <div class="row border border-2">
+                            <div class="col-3">
+                                <p><strong>Upcoming Interviews</strong></p>
+                            </div>
+                            <div class="col-5"><p>2</p></div>
+                            <div class="col-2">
+                            </div>
+                            <div class="col-2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 pt-1"><strong>Candidate Name 1</strong></div>
+                            <div class="col-3 pt-1">Interview Date</div>
+                            <div class="col-3"></div>
+                            <div class="col-3">
+                                <button  class="mt-2 mb-sm-3 mb-3 me-3 px-3" mat-raised-button color="primary">VIEW CANDIDATE</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 pt-1"><strong>Candidate Name 1</strong></div>
+                            <div class="col-3 pt-1">Interview Date</div>
+                            <div class="col-3"></div>
+                            <div class="col-3">
+                                <button  class="mt-2 mb-sm-3 mb-3 me-3 px-3" mat-raised-button color="primary">VIEW CANDIDATE</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- completed interview details -->
+                    <div class="col-12 border mt-3">
+                        <div class="row border border-2">
+                            <div class="col-3">
+                                <p><strong>Completed Interviews</strong></p>
+                            </div>
+                            <div class="col-5"><p>2</p></div>
+                            <div class="col-2">
+                            </div>
+                            <div class="col-2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 pt-1"><strong>Candidate Name 1</strong></div>
+                            <div class="col-2 pt-1">Interview Date</div>
+                            <div class="col-2"><strong>7.8</strong></div>
+                            <div class="col-2"><p>View Feedback</p></div>
+                            <div class="col-3">
+                                <button  class="mt-2 mb-sm-3 mb-3 me-3 px-3" mat-raised-button color="primary">VIEW CANDIDATE</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 pt-1"><strong>Candidate Name 1</strong></div>
+                            <div class="col-2 pt-1">Interview Date</div>
+                            <div class="col-2"><strong>7.8</strong></div>
+                            <div class="col-2"><p>View Feedback</p></div>
+                            <div class="col-3">
+                                <button  class="mt-2 mb-sm-3 mb-3 me-3 px-3" mat-raised-button color="primary">VIEW CANDIDATE</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 pt-1"><strong>Candidate Name 1</strong></div>
+                            <div class="col-2 pt-1">Interview Date</div>
+                            <div class="col-2"><strong>7.8</strong></div>
+                            <div class="col-2"><p>View Feedback</p></div>
+                            <div class="col-3">
+                                <button  class="mt-2 mb-sm-3 mb-3 me-3 px-3" mat-raised-button color="primary">VIEW CANDIDATE</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-12"></div>
+            <div class="col-12"></div>
+            <div class="col-12"></div>
+            <div class="col-12"></div>
+            <div class="col-12"></div>
+        </div>
+    </ng-template>
+
+</div>

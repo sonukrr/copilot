@@ -53,9 +53,11 @@ export class DataService {
 
 
   private apiUrl = 'https://api.openai.com/v1/chat/completions';
-  private apiKey = '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';
+  private apiKey = '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';
 
 
+
+  
   chat(query: string): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',

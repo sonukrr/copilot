@@ -1,0 +1,27 @@
+
+.secondary-font {
+    font-size: 14px;
+}
+
+// 13px
+.small-text {
+    font-size: .8rem;
+}
+
+.small-icon{
+    transform: scale(.65);
+}
+
+.dot {
+    height: 5rem;
+    width: 5rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+.borders {
+    border: 1px solid #D8D9E5;
+    border-radius: .25rem;
+}

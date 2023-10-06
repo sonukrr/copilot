@@ -36,17 +36,17 @@ export class DataStoreService implements OnInit {
     });
 
 
-    this.dbQueryService.getJobs().subscribe((data) => {
-      this.jobs = data;
-    });
+    // this.dbQueryService.getJobs().subscribe((data) => {
+    //   this.jobs = data;
+    // });
 
-    this.dbQueryService.getJobs().subscribe((data) => {
-      this.jobs = data;
-    });
+    // this.dbQueryService.getJobs().subscribe((data) => {
+    //   this.jobs = data;
+    // });
 
-    this.dbQueryService.getJobs().subscribe((data) => {
-      this.jobs = data;
-    });
+    // this.dbQueryService.getJobs().subscribe((data) => {
+    //   this.jobs = data;
+    // });
   }
 
 
