@@ -40,12 +40,12 @@ export class MainService {
       },
       {
         id: 2,
-        text: 'Manage Requisitions',
-        link: '/users',
-        logoPath: 'assets/img/manage-requisitions.svg',
-        altText: 'manage requisitions',
-        pageTitle: 'Manage Requisitions'
-      }
+        text: 'Candidates',
+        link: '/candidates',
+        logoPath: 'assets/img/approvals.svg',
+        altText: 'candidates',
+        pageTitle: 'Candidates'
+      },
     ],
 
     selected: null

@@ -10,8 +10,8 @@
       "jobId": 1,
       "candidateId": 1,
       "feedbacks": {
-        "interviewerFeedbackId": 1,
-        "candidateFeedbackId": 1
+        "interviewerFeedbackId": "",
+        "candidateFeedbackId": ""
       }
     }
   },
@@ -138,14 +138,14 @@
       "jobId": 9,
       "candidateId": 9,
       "feedbacks": {
-        "interviewerFeedbackId": 9,
-        "candidateFeedbackId": 9
+        "interviewerFeedbackId": null,
+        "candidateFeedbackId": null
       }
     }
   },
   {
     "id": 10,
-    "dateTime": "Tue Sep 19 2023 13:00:00 GMT+0530 (India Standard Time)",
+    "dateTime": "Fri Sep 15 2023 10:15:00 GMT+0530 (India Standard Time)",
     "status": "Completed",
     "provider": "MS Teams",
     "meetingUrl": "https://teams.microsoft.com/meeting/10",

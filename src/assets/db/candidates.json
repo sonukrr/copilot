@@ -5,14 +5,14 @@
     "designation": "Software Engineer",
     "company": "Google",
     "exp": {
-      "min": "4 years",
-      "max": "7 years"
+      "min": "4",
+      "max": "7"
     },
     "location": "Mountain View, CA",
     "ctc": "$130,000",
     "email": "johndoe@gmail.com",
     "phoneNo": "+1 123-456-7890",
-    "profilePicUrl": "assets/candidateAvatars/1.jpg",
+    "profilePicUrl": "assets/candidateAvatars/1.jpeg",
     "education": [
       {
         "fromYear": "2011",
@@ -45,14 +45,14 @@
     "designation": "Data Scientist",
     "company": "Amazon",
     "exp": {
-      "min": "5 years",
-      "max": "9 years"
+      "min": "5",
+      "max": "9"
     },
     "location": "Seattle, WA",
     "ctc": "$140,000",
     "email": "janesmith@yahoo.com",
     "phoneNo": "+1 234-567-8901",
-    "profilePicUrl": "assets/candidateAvatars/2.jpg",
+    "profilePicUrl": "assets/candidateAvatars/2.jpeg",
     "education": [
       {
         "fromYear": "2010",
@@ -85,14 +85,14 @@
     "designation": "Network Engineer",
     "company": "Cisco",
     "exp": {
-      "min": "6 years",
-      "max": "10 years"
+      "min": "6",
+      "max": "10"
     },
     "location": "San Jose, CA",
     "ctc": "$125,000",
     "email": "michaeljohnson@gmail.com",
     "phoneNo": "+1 345-678-9012",
-    "profilePicUrl": "assets/candidateAvatars/3.jpg",
+    "profilePicUrl": "assets/candidateAvatars/3.jpeg",
     "education": [
       {
         "fromYear": "2009",
@@ -125,14 +125,14 @@
     "designation": "DevOps Engineer",
     "company": "Microsoft",
     "exp": {
-      "min": "3 years",
-      "max": "6 years"
+      "min": "3",
+      "max": "6"
     },
     "location": "Redmond, WA",
     "ctc": "$120,000",
     "email": "emilydavis@hotmail.com",
     "phoneNo": "+1 456-789-0123",
-    "profilePicUrl": "assets/candidateAvatars/4.jpg",
+    "profilePicUrl": "assets/candidateAvatars/4.jpeg",
     "education": [
       {
         "fromYear": "2012",
@@ -165,14 +165,14 @@
     "designation": "Frontend Developer",
     "company": "Apple",
     "exp": {
-      "min": "4 years",
-      "max": "8 years"
+      "min": "4",
+      "max": "8"
     },
     "location": "Cupertino, CA",
     "ctc": "$130,000",
     "email": "michaelawhite@gmail.com",
     "phoneNo": "+1 567-890-1234",
-    "profilePicUrl": "assets/candidateAvatars/5.jpg",
+    "profilePicUrl": "assets/candidateAvatars/5.jpeg",
     "education": [
       {
         "fromYear": "2013",
@@ -205,14 +205,14 @@
     "designation": "Database Administrator",
     "company": "Oracle",
     "exp": {
-      "min": "5 years",
-      "max": "9 years"
+      "min": "5",
+      "max": "9"
     },
     "location": "Redwood City, CA",
     "ctc": "$140,000",
     "email": "davidwilson@gmail.com",
     "phoneNo": "+1 678-901-2345",
-    "profilePicUrl": "assets/candidateAvatars/6.jpg",
+    "profilePicUrl": "assets/candidateAvatars/6.jpeg",
     "education": [
       {
         "fromYear": "2011",
@@ -245,14 +245,14 @@
     "designation": "AI/ML Engineer",
     "company": "Facebook",
     "exp": {
-      "min": "4 years",
-      "max": "7 years"
+      "min": "4",
+      "max": "7"
     },
     "location": "Menlo Park, CA",
     "ctc": "$135,000",
     "email": "sarapatel@gmail.com",
     "phoneNo": "+1 789-012-3456",
-    "profilePicUrl": "assets/candidateAvatars/7.jpg",
+    "profilePicUrl": "assets/candidateAvatars/7.jpeg",
     "education": [
       {
         "fromYear": "2012",
@@ -276,7 +276,7 @@
         "educationScore": "8.5",
         "overallFitScore": "9.0"
       },
-      "interviewId": 9
+      "interviewId": 8
     }
   },
   {
@@ -285,14 +285,14 @@
     "designation": "Blockchain Developer",
     "company": "IBM",
     "exp": {
-      "min": "3 years",
-      "max": "6 years"
+      "min": "3",
+      "max": "6"
     },
     "location": "Armonk, NY",
     "ctc": "$120,000",
     "email": "daniellee@gmail.com",
     "phoneNo": "+1 890-123-4567",
-    "profilePicUrl": "assets/candidateAvatars/8.jpg",
+    "profilePicUrl": "assets/candidateAvatars/8.jpeg",
     "education": [
       {
         "fromYear": "2013",
@@ -316,7 +316,87 @@
         "educationScore": "8.0",
         "overallFitScore": "8.4"
       },
+      "interviewId": 7
+    }
+  },
+  {
+    "id": 9,
+    "name": "Daniel Lee",
+    "designation": "Blockchain Developer",
+    "company": "IBM",
+    "exp": {
+      "min": "3",
+      "max": "6"
+    },
+    "location": "Armonk, NY",
+    "ctc": "$120,000",
+    "email": "daniellee@gmail.com",
+    "phoneNo": "+1 890-123-4567",
+    "profilePicUrl": "assets/candidateAvatars/8.jpeg",
+    "education": [
+      {
+        "fromYear": "2013",
+        "toYear": "2017",
+        "institute": "Columbia University",
+        "course": "Blockchain Development"
+      }
+    ],
+    "keySkills": ["Ethereum", "Smart Contract Development", "Solidity"],
+    "mayAlsoKnow": ["Hyperledger Fabric", "Web3.js", "DApp Development"],
+    "socialProfiles": {
+      "linkedInUrl": "https://www.linkedin.com/in/daniellee/",
+      "gitHubUrl": "https://github.com/daniellee",
+      "webPortfolioUrl": "https://danielleeportfolio.com"
+    },
+    "metaData": {
+      "jobId": 10,
+      "fitAnalysis": {
+        "expScore": "5",
+        "skillsScore": "7",
+        "educationScore": "8",
+        "overallFitScore": "5"
+      },
       "interviewId": 10
+    }
+  },
+  {
+    "id": 10,
+    "name": "Daniel Lee",
+    "designation": "Blockchain Developer",
+    "company": "IBM",
+    "exp": {
+      "min": "3",
+      "max": "6"
+    },
+    "location": "Armonk, NY",
+    "ctc": "$120,000",
+    "email": "daniellee@gmail.com",
+    "phoneNo": "+1 890-123-4567",
+    "profilePicUrl": "assets/candidateAvatars/8.jpeg",
+    "education": [
+      {
+        "fromYear": "2013",
+        "toYear": "2017",
+        "institute": "Columbia University",
+        "course": "Blockchain Development"
+      }
+    ],
+    "keySkills": ["Ethereum", "Smart Contract Development", "Solidity"],
+    "mayAlsoKnow": ["Hyperledger Fabric", "Web3.js", "DApp Development"],
+    "socialProfiles": {
+      "linkedInUrl": "https://www.linkedin.com/in/daniellee/",
+      "gitHubUrl": "https://github.com/daniellee",
+      "webPortfolioUrl": "https://danielleeportfolio.com"
+    },
+    "metaData": {
+      "jobId": 10,
+      "fitAnalysis": {
+        "expScore": "8.5",
+        "skillsScore": "8.7",
+        "educationScore": "8.0",
+        "overallFitScore": "8.4"
+      },
+      "interviewId": 9
     }
   }
 ]

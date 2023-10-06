@@ -39,11 +39,11 @@ export class MainService {
       },
       {
         id: 2,
-        text: 'Manage Requisitions',
-        link: '/users',
+        text: 'Candidates',
+        link: '/candidates',
         logoPath: 'assets/img/manage-requisitions.svg',
         altText: 'manage requisitions',
-        pageTitle: 'Manage Requisitions'
+        pageTitle: 'Candidates'
       },
       {
         id: 3,

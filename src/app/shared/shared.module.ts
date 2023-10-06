@@ -22,6 +22,7 @@ import { SampleComponentComponent } from './components/sample-component/sample-c
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
 // import { TranslateModule } from '@ngx-translate/core';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { HighchartsChartModule } from 'highcharts-angular';
 // import { CamelCaseToTitleCasePipe } from './pipes/camel-case-to-title-case.pipe';
 // import { DateFormatPipe } from './pipes/date-format.pipe';
 // import { FirstWordPipe } from './pipes/first-word.pipe';
@@ -57,7 +58,9 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     ReactiveFormsModule,
     MaterialModule,
     // TranslateModule,
-    NgxSkeletonLoaderModule
+    NgxSkeletonLoaderModule,
+    HighchartsChartModule,
+
 
   ],
   exports: [
@@ -76,7 +79,8 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     TimeAgoPipe,
     // TranslateModule,
     FilterPipe,
-    NgxSkeletonLoaderModule
+    NgxSkeletonLoaderModule,
+    HighchartsChartModule
   ]
 })
 export class SharedModule { }

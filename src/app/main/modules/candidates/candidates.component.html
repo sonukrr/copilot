@@ -1,0 +1,174 @@
+<h4>{{data.totalCount}} Candidates found</h4>
+
+<highcharts-chart
+  [Highcharts]="Highcharts"
+  [options]="chartOptions"
+
+  style="width: 100%; height: 400px; display: block;"
+></highcharts-chart>
+
+
+
+<p>Upcoming Interviews</p>
+{{data.upcomingInterviews | json}}
+
+
+<p>Pending Feedback</p>
+{{data.pendingFeedback | json}}
+
+
+
+
+<p>Past Interviews</p>
+{{data.pastInterviews | json}}
+
+
+<h4>Upcming Interviews</h4>
+<div class="profile-cards ps-4 mt-2" *ngIf="data.upcomingInterviews.length > 0">
+  <ng-container *ngFor="let profile of data.upcomingInterviews">
+    <mat-card class="profile container-fluid mb-3 overflow-hidden">
+      <mat-card-content class="pt-4">
+
+        <div class="profile__row row align-items-center">
+          <!-- basic details starts here  -->
+          <div class="profile__basic col-3 text-center position-relative">
+            <mat-divider [vertical]="true" class="zm-v-divider"></mat-divider>
+              <div>
+                <div>
+                  <img class="profile__basic__avatar" [src]="profile.profilePicUrl">
+
+                </div>
+
+                <div class="profile__basic-info__name-cv zm-lw-bold-600 mt-2">
+                  <span title={{profile.name}} ng-click="openProfilePage(profile)"> {{ profile.name.length <= 19 ? profile.name :
+                      (profile.name.slice(0, 20) + '...' ) | titlecase}}</span>
+                </div>
+
+                <div class="profile__basic-info__contact my-2 mb-3" *ngIf="profile.phoneNo"><span class="zm-lw-bold-600">Phone :
+                  </span>{{profile.phoneNo}}</div>
+              </div>
+          </div>
+
+
+
+
+
+          <!-- basic details ends here -->
+
+
+
+          <div class="profile-card__desc col-6 px-3 position-relative">
+            <mat-divider [vertical]="true" class="zm-v-divider"></mat-divider>
+            <div class="profile__details container mb-2">
+              <div class="profile__details__highlights col-12 text-center ">
+                <div class="zm-white-space-nowrap d-flex align-items-center" [matTooltip]="profile.location | titlecase">
+                  <mat-icon class="material-icons-rounded material-icons-outlined ms-1 me-1 text-secondary" matTooltip="Candidate Location"
+                        aria-label="Button that displays a tooltip in various positions">location_on</mat-icon>
+                         {{profile.location | titlecase}}
+
+
+                  </div>
+                <div class="zm-white-space-nowrap d-flex align-items-center" [matTooltip]="profile.exp">
+                  <mat-icon class="material-icons-rounded material-icons-outlined ms-1 me-1 text-secondary" matTooltip="Work Location"
+                  aria-label="Button that displays a tooltip in various positions">work_outline</mat-icon>
+                  {{profile.exp.min}} - {{profile.exp.max}} Yr(s)
+
+
+                  </div>
+                <div class="zm-white-space-nowrap d-flex align-items-center" [matTooltip]="profile.salary">
+                  <mat-icon class="material-icons-rounded material-icons-outlined ms-1 me-1 text-secondary" matTooltip="Salary"
+                  aria-label="Button that displays a tooltip in various positions">payments</mat-icon>
+
+
+
+                    {{profile.ctc}}</div>
+              </div>
+
+              <div class="zm-flex-gap-5 mb-1">
+                <div class="profile-details-left zm-lw-bold-600">Current Job:</div>
+                <div class="profile-details-right" [matTooltip]="profile.designation | titlecase">
+                  {{profile.designation | titlecase}} at {{profile.company}}
+
+                </div>
+                <div class="profile-details-right zm-data-not-avail" *ngIf="profile.designation?.length == 0">
+                  Not specified</div>
+
+              </div>
+              <div class="zm-flex-gap-5 mb-1">
+                <div class="profile-details-left zm-lw-bold-600">Education:
+                </div>
+                <div class="profile-details-right">
+                  <div *ngIf="profile.education.length > 0"  >
+                    <ng-container *ngFor="let edu of profile.education">
+                      <div class="text-wrap-skills" [matTooltip]="edu">{{edu.course}} from  {{edu.institute}}, {{edu.fromYear}} - {{edu.toYear}}</div>
+
+                    </ng-container>
+
+                  </div>
+                </div>
+              </div>
+              <div class="zm-flex-gap-5 mb-1" style="column-gap: 0%;">
+                <div class="profile-details-left zm-lw-bold-600">Pref. Location:</div>
+                <div class="d-flex-70p">
+                 {{profile.location}}
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
+          <div class="profile-card__action profile-card__action col-3 d-flex justify-content-center align-items-center">
+
+            <button type="submit" mat-raised-button color="primary"
+              class="waves-effect waves-light btn-success btn" >ADD TO JOB</button>
+
+          </div>
+        </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="profile-card__skills-row row my-3 pe-3 ps-3">
+        <div class="profile-card__key-skills-row col-6 position-relative">
+          <mat-divider vertical="true" class="zm-key-skills-v-divider"></mat-divider>
+
+          <p class="zm-lw-bold-600 mb-1">Key Skills</p>
+          <div class="col-12">
+            {{transformSkillsToDisplay(profile.keySkills)}}
+          </div>
+        </div>
+
+        <div class="profile-card__may-also-know-skills-row col-6 position-relative">
+          <mat-divider vertical="true" class="zm-rel-skills-v-divider"></mat-divider>
+          <p class="zm-lw-bold-600 mb-1">May also know</p>
+          <div class="col-12">
+            {{transformSkillsToDisplay(profile.mayAlsoKnow)}}
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card__additional-details row py-2 mt-2">
+          <div class="col-6 d-flex ps-4">
+            <div class= "me-4"><span class="text-secondary">Candidate evaluation prior to interview : </span> <span class="zm-lw-bold-600">{{profile.modifiedOn | date:'dd MMM y'}}</span></div>
+
+
+          </div>
+          <div class="col-6 d-flex">
+            <div>
+              <span class="text-secondary">Candidate specific questionare : </span> <span class="zm-lw-bold-600">{{profile.activeOn | date: 'dd MMM y'}} </span>
+            </div>
+          </div>
+      </div>
+      </mat-card-content>
+
+
+    </mat-card>
+  </ng-container>
+
+
+</div>
+
+
