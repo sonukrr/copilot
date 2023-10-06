@@ -53,7 +53,7 @@ export class DataService {
 
 
   private apiUrl = 'https://api.openai.com/v1/chat/completions';
-  private apiKey = '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';
+  private apiKey = '';
 
 
 

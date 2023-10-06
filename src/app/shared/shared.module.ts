@@ -27,7 +27,15 @@ import { HighchartsChartModule } from 'highcharts-angular';
 // import { DateFormatPipe } from './pipes/date-format.pipe';
 // import { FirstWordPipe } from './pipes/first-word.pipe';
 
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
+
+// import {ScheduleModule, AgendaService, DayService, WeekService, WorkWeekService, MonthService } from '@syncfusion/ej2-angular-schedule';
+
+import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
+// import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
+import { DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService} from '@syncfusion/ej2-angular-schedule';
 
 @NgModule({
   declarations: [
@@ -49,6 +57,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
     StartRatingComponent,
     SampleComponentComponent,
     TimeAgoPipe,
+    
 
   ],
   imports: [
@@ -60,9 +69,23 @@ import { HighchartsChartModule } from 'highcharts-angular';
     // TranslateModule,
     NgxSkeletonLoaderModule,
     HighchartsChartModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+    ScheduleModule
 
 
   ],
+
+  // providers: [AgendaService, DayService, WeekService, WorkWeekService, MonthService],
+  providers: [DayService, 
+    WeekService, 
+    WorkWeekService, 
+    MonthService,
+    AgendaService,
+    MonthAgendaService],
+
   exports: [
     FormsModule,
     ReactiveFormsModule,
@@ -80,7 +103,9 @@ import { HighchartsChartModule } from 'highcharts-angular';
     // TranslateModule,
     FilterPipe,
     NgxSkeletonLoaderModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    CalendarModule,
+    ScheduleModule
   ]
 })
 export class SharedModule { }
