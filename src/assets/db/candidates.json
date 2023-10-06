@@ -321,18 +321,18 @@
   },
   {
     "id": 9,
-    "name": "Daniel Lee",
-    "designation": "Blockchain Developer",
-    "company": "IBM",
+    "name": "Ajay Boruah",
+    "designation": "Frontend Developer",
+    "company": "Cognizant",
     "exp": {
       "min": "3",
       "max": "6"
     },
-    "location": "Armonk, NY",
+    "location": "Assam, India",
     "ctc": "$120,000",
     "email": "daniellee@gmail.com",
     "phoneNo": "+1 890-123-4567",
-    "profilePicUrl": "assets/candidateAvatars/8.jpeg",
+    "profilePicUrl": "assets/candidateAvatars/9.jpeg",
     "education": [
       {
         "fromYear": "2013",
@@ -341,8 +341,8 @@
         "course": "Blockchain Development"
       }
     ],
-    "keySkills": ["Ethereum", "Smart Contract Development", "Solidity"],
-    "mayAlsoKnow": ["Hyperledger Fabric", "Web3.js", "DApp Development"],
+    "keySkills": ["CSS", "HTML", "Angular", "React"],
+    "mayAlsoKnow": ["Web3.js", "DApp Development"],
     "socialProfiles": {
       "linkedInUrl": "https://www.linkedin.com/in/daniellee/",
       "gitHubUrl": "https://github.com/daniellee",
@@ -361,8 +361,8 @@
   },
   {
     "id": 10,
-    "name": "Daniel Lee",
-    "designation": "Blockchain Developer",
+    "name": "Abhishek Gupta",
+    "designation": "Java Developer",
     "company": "IBM",
     "exp": {
       "min": "3",
@@ -372,7 +372,7 @@
     "ctc": "$120,000",
     "email": "daniellee@gmail.com",
     "phoneNo": "+1 890-123-4567",
-    "profilePicUrl": "assets/candidateAvatars/8.jpeg",
+    "profilePicUrl": "assets/candidateAvatars/10.jpeg",
     "education": [
       {
         "fromYear": "2013",
@@ -381,8 +381,8 @@
         "course": "Blockchain Development"
       }
     ],
-    "keySkills": ["Ethereum", "Smart Contract Development", "Solidity"],
-    "mayAlsoKnow": ["Hyperledger Fabric", "Web3.js", "DApp Development"],
+    "keySkills": ["Java", "Spring Boot", "Spring MVC"],
+    "mayAlsoKnow": ["NodeJs", "AWS", "Big Data"],
     "socialProfiles": {
       "linkedInUrl": "https://www.linkedin.com/in/daniellee/",
       "gitHubUrl": "https://github.com/daniellee",
