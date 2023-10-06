@@ -31,8 +31,8 @@ export class MainService {
       },
       {
         id: 1,
-        text: 'Manage Jobs',
-        link: '/job-list',
+        text: 'Jobs',
+        link: '/jobs',
         logoPath: 'assets/img/manage-jobs.svg',
         altText: 'manage jobs',
         pageTitle: 'Manage Jobs'

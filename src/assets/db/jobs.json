@@ -9,8 +9,8 @@
     "desirableSkills": ["JavaScript", "React", "Docker"],
     "designation": "Engineer I",
     "exp": {
-      "min": "1 year",
-      "max": "5 years"
+      "min": "1",
+      "max": "5"
     },
     "evaluationCriteria": "Coding test, technical interview",
     "skillsToBEEvaluatedOn": "Coding skills, problem-solving",
@@ -29,8 +29,8 @@
     "desirableSkills": ["TensorFlow", "Tableau", "Big Data"],
     "designation": "Data Scientist I",
     "exp": {
-      "min": "2 years",
-      "max": "7 years"
+      "min": "2",
+      "max": "7"
     },
     "evaluationCriteria": "Data analysis challenge, technical interview",
     "skillsToBEEvaluatedOn": "Data analysis, modeling",
@@ -49,8 +49,8 @@
     "desirableSkills": ["CCNA", "SDN", "Wireless Networking"],
     "designation": "Network Engineer I",
     "exp": {
-      "min": "3 years",
-      "max": "8 years"
+      "min": "3",
+      "max": "8"
     },
     "evaluationCriteria": "Network configuration task, technical interview",
     "skillsToBEEvaluatedOn": "Network design, troubleshooting",
@@ -69,8 +69,8 @@
     "desirableSkills": ["Terraform", "AWS", "Scripting (e.g., Bash, Python)"],
     "designation": "DevOps Engineer I",
     "exp": {
-      "min": "2 years",
-      "max": "6 years"
+      "min": "2",
+      "max": "6"
     },
     "evaluationCriteria": "DevOps task, technical interview",
     "skillsToBEEvaluatedOn": "Automation, infrastructure management",
@@ -89,8 +89,8 @@
     "desirableSkills": ["React", "Angular", "Vue.js"],
     "designation": "Developer I",
     "exp": {
-      "min": "1 year",
-      "max": "5 years"
+      "min": "1",
+      "max": "5"
     },
     "evaluationCriteria": "Frontend coding test, UI design review",
     "skillsToBEEvaluatedOn": "Frontend development, UI/UX",
@@ -109,8 +109,8 @@
     "desirableSkills": ["Certifications (e.g., CISSP, CISM)", "Penetration Testing", "Security Auditing"],
     "designation": "Analyst I",
     "exp": {
-      "min": "2 years",
-      "max": "6 years"
+      "min": "2",
+      "max": "6"
     },
     "evaluationCriteria": "Security assessment, security incident simulation",
     "skillsToBEEvaluatedOn": "Security analysis, threat detection",
@@ -129,8 +129,8 @@
     "desirableSkills": ["Certifications (e.g., AWS Solutions Architect)", "Serverless Computing", "Containers"],
     "designation": "Architect I",
     "exp": {
-      "min": "4 years",
-      "max": "10 years"
+      "min": "4",
+      "max": "10"
     },
     "evaluationCriteria": "Solution architecture presentation, technical interview",
     "skillsToBEEvaluatedOn": "Cloud architecture, client interaction",
@@ -149,8 +149,8 @@
     "desirableSkills": ["Oracle", "MongoDB", "Database Security"],
     "designation": "Administrator I",
     "exp": {
-      "min": "3 years",
-      "max": "8 years"
+      "min": "3",
+      "max": "8"
     },
     "evaluationCriteria": "Database management task, database performance assessment",
     "skillsToBEEvaluatedOn": "Database administration, optimization",
@@ -169,8 +169,8 @@
     "desirableSkills": ["TensorFlow", "PyTorch", "Natural Language Processing"],
     "designation": "Engineer I",
     "exp": {
-      "min": "2 years",
-      "max": "7 years"
+      "min": "2",
+      "max": "7"
     },
     "evaluationCriteria": "Machine learning task, technical interview",
     "skillsToBEEvaluatedOn": "Machine learning, problem-solving",
@@ -189,8 +189,8 @@
     "desirableSkills": ["Solidity", "Web3.js", "DApp Development"],
     "designation": "Developer I",
     "exp": {
-      "min": "2 years",
-      "max": "6 years"
+      "min": "2",
+      "max": "6"
     },
     "evaluationCriteria": "Blockchain development task, technical interview",
     "skillsToBEEvaluatedOn": "Blockchain development, smart contract coding",

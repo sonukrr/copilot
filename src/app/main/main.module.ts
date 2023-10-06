@@ -7,6 +7,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { MainComponent } from './main.component';
 import { SharedModule } from '../shared/shared.module';
 import { CandidatesComponent } from './modules/candidates/candidates.component';
+import { JobsComponent } from './modules/jobs/jobs.component';
 
 
 @NgModule({
@@ -14,12 +15,13 @@ import { CandidatesComponent } from './modules/candidates/candidates.component';
     DashboardComponent,
     MainComponent,
     CandidatesComponent,
+    JobsComponent,
   ],
   imports: [
     CommonModule,
     MainRoutingModule,
     SharedModule
-    
+
   ]
 })
 export class MainModule { }
