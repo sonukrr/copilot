@@ -5,10 +5,11 @@ import { Interview } from '../../models/interview';
 import * as Highcharts from 'highcharts';
 import highchartsMore from 'highcharts/highcharts-more';
 import exporting from 'highcharts/modules/exporting';
+// import HC_darkUnica from 'highcharts/themes/dark-unica';
 
 highchartsMore(Highcharts);
 exporting(Highcharts);
-
+// HC_darkUnica(Highcharts);
 
 
 @Component({
@@ -52,7 +53,49 @@ export class CandidatesComponent implements OnInit{
 
     this.renderSpiderWeb();
 
+
+
+
+
+
   }
+   candidateChartOptions: any = {
+    chart: {
+      polar: true,
+      type: 'area'
+    },
+    title: {
+      text: ''
+    },
+    xAxis: {
+      categories: ['Experience', "Skills", "Education", "Overall"],
+      tickmarkPlacement: 'on',
+      lineWidth: 0
+    },
+    yAxis: {
+      gridLineInterpolation: 'polygon',
+      lineWidth: 0,
+      min: 0,
+      labels: {
+        enabled: false // Disable the labels on the yAxis
+      }
+    },
+    tooltip: {
+      shared: true,
+      pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+    },
+    series: [],
+    credits: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: false // Disable the data labels on the series
+        }
+      }
+    }
+  };
 
   Highcharts: typeof Highcharts = Highcharts;
   chartOptions: any = {
@@ -61,10 +104,10 @@ export class CandidatesComponent implements OnInit{
       type: 'area'
     },
     title: {
-      text: 'Spider Web Chart'
+      text: 'Completed Interviews score'
     },
     xAxis: {
-      categories: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5'],
+      categories: ['Experience', "Skills", "Education", "Overall"],
       tickmarkPlacement: 'on',
       lineWidth: 0
     },
@@ -85,7 +128,10 @@ export class CandidatesComponent implements OnInit{
       name: 'Series 2',
       data: [70, 80, 50, 60, 80],
       pointPlacement: 'on'
-    }]
+    }],
+    credits: {
+      enabled: false
+    },
   };
 
   getPreferredLocations (data: any){
@@ -109,6 +155,19 @@ export class CandidatesComponent implements OnInit{
     this.chartOptions.xAxis.categories = ['Experience', "Skills", "Education", "Overall"];
     this.chartOptions.series = [];
     this.data.pastInterviews.forEach((cand: Candidate)=> {
+
+      setTimeout(() => {
+        let options = JSON.parse(JSON.stringify (this.candidateChartOptions));
+        options.series.push(
+          {
+            name: cand.name,
+            data: [+cand.metaData.fitAnalysis.expScore, +cand.metaData.fitAnalysis.skillsScore, +cand.metaData.fitAnalysis.educationScore, +cand.metaData.fitAnalysis.overallFitScore],
+            pointPlacement: 'on'
+          }
+        )
+        Highcharts.chart('scoreChart' + cand.id, options );
+      }, 0);
+
       this.chartOptions.series.push(
         {
           name: cand.name,
@@ -162,6 +221,12 @@ export class CandidatesComponent implements OnInit{
 
     });
 
+    setTimeout(() => {
+      console.log("Upcoming INterviews", this.data.upcomingInterviews);
+
+    }, 2000);
+
+
     console.log(pastInterviews);
 
 
@@ -180,5 +245,16 @@ export class CandidatesComponent implements OnInit{
   }
 
 
+  openInNewTab(url: string){
+    window.open(url, "_blank");
+  }
 
+  getInterviewLink(intId: any){
+    return this.allInterviewsDb.find((el: any)=> el.id == intId);
+
+  }
+
+  provideFeedback(candidate: any){
+    
+  }
 }

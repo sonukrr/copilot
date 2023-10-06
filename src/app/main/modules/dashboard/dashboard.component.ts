@@ -12,11 +12,11 @@ import { Job } from '../../models/job';
 })
 export class DashboardComponent implements OnInit {
 
-  userDetails : any
-  query:any
-  disabled:boolean = false
-  isLoading:boolean = false
-  dummyResp2:string = ''
+  userDetails: any
+  query: any
+  disabled: boolean = false
+  isLoading: boolean = false
+  dummyResp2: string = ''
   constructor(
     private dataService: DataService,
     private appService: AppService,
@@ -25,38 +25,41 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // SK- loads all data to dataStore service varaibles from json Db
     this.dataStoreService.loadDataFromDb();
-
-    // this.dataService.chat("How are you?").subscribe({next : (res:any)=>{
-    //   console.log(res)
-    // },error : (err:any) =>{
-    //   console.log(err)
-    // }})
-
   }
 
 
-  submit(){
+  submit() {
     this.isLoading = true
-    this.dataService.chat(this.query).subscribe({next : (res:any)=>{
-      // console.log(res)
-      this.isLoading = false
-      this.startTypingEffect(res.choices[0].message.content)
-    },error : (err:any) =>{
-      console.log(err)
-    }})
-
+    this.dataService.chat(this.query).subscribe({
+      next: (res: any) => {
+        this.isLoading = false
+        this.startTypingEffect(res.choices[0].message.content)
+      }, error: (err: any) => {
+        console.log(err)
+      }
+    })
   }
 
+  getFitScore(parsedResult: any, jobObject: any) {
+    this.isLoading = true;
+    let params = {
+      parsedResult: this.query,
+      jobObject: JSON.stringify(parsedResult)
+    }
+    this.dataService.getFitScore(params).subscribe({
+      next: (res: any) => {
+        this.isLoading = false
+        console.log(res.choices[0].message.content);
+      }, error: (err: any) => {
+        console.log(err)
+      }
+    });
+  }
 
-
-
-  startTypingEffect(repsonseText:any) {
+  startTypingEffect(repsonseText: any) {
     const words = repsonseText.split(' ');
-
     let currentIndex = 0;
-
     const typingInterval = setInterval(() => {
       if (currentIndex < words.length) {
         this.dummyResp2 = words.slice(0, currentIndex + 1).join(' ');
