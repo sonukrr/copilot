@@ -12,6 +12,7 @@ $cp-header-height: 3.5em;
 
   grid-template-rows: $cp-header-height 1fr auto;
   grid-template-columns: $cp-side-nav-width 1fr;
+  // background-color: rgb(56, 53, 53);
 }
 
 app-header {

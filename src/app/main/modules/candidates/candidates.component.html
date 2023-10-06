@@ -1,29 +1,20 @@
-<h4>{{data.totalCount}} Candidates found</h4>
+<h4 class="ps-4 mt-2">{{data.totalCount}} Candidates found</h4>
 
-<highcharts-chart
-  [Highcharts]="Highcharts"
-  [options]="chartOptions"
+<div class="row ps-4">
+  <div class="col-6">
+    <highcharts-chart
+    [Highcharts]="Highcharts"
+    [options]="chartOptions"
 
-  style="width: 100%; height: 400px; display: block;"
-></highcharts-chart>
-
-
-
-<p>Upcoming Interviews</p>
-{{data.upcomingInterviews | json}}
-
-
-<p>Pending Feedback</p>
-{{data.pendingFeedback | json}}
+    style="width: 100%; height: 400px; display: block;"
+  ></highcharts-chart>
+  </div>
+</div>
 
 
 
 
-<p>Past Interviews</p>
-{{data.pastInterviews | json}}
-
-
-<h4>Upcming Interviews</h4>
+<h5 class="ps-4 mt-4">Upcoming Interviews</h5>
 <div class="profile-cards ps-4 mt-2" *ngIf="data.upcomingInterviews.length > 0">
   <ng-container *ngFor="let profile of data.upcomingInterviews">
     <mat-card class="profile container-fluid mb-3 overflow-hidden">
@@ -119,10 +110,23 @@
           </div>
 
 
-          <div class="profile-card__action profile-card__action col-3 d-flex justify-content-center align-items-center">
+          <div class="profile-card__action profile-card__action col-3">
 
-            <button type="submit" mat-raised-button color="primary"
-              class="waves-effect waves-light btn-success btn" >ADD TO JOB</button>
+            <!-- <button type="submit" mat-raised-button color="primary"
+              class="waves-effect waves-light btn-success btn" >ADD TO JOB</button> -->
+
+              <div class="d-flex justify-content-center">
+                <img class="me-2" height="30px" width="30px" (click)="openInNewTab(profile.socialProfiles.linkedInUrl)" src="data:image/png;base64,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" alt="">
+                <img class="me-2" height="30px" width="30px" (click)="openInNewTab(profile.socialProfiles.gitHubUrl)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAkFBMVEX///8XFRUAAAAUEhIJBQUQDQ0MCQkEAADt7e319fXr6+vw8PAVEhLo6Oi/v7/6+vpcW1shHx9rampXVla5uLh4d3dBQECfnp7j4+PLy8tPTk7HxsbX19cuLS1IR0eYl5eOjY04Njaop6coJiaFhIRubW0yMTGvrq58e3tjYmKSkpKJiYnc29tDQkIkIiKkpKQrDOYYAAAKMUlEQVR4nO2d53arOhBGDyMDJrjhGre4xiVOef+3u8Y+jjGgGYEKPndp/8paSRAfqEyT+PPHYrFYLBaLxWKxWCwWi8VisVgsFovF8u/Rbs7G09aF6XjWbFd9P8oIXsY/p84GMkS97c+0GVR9f1IE02VnHoupMScDq8W/2fRO03rV91mKcHqKtdXcrLSMzGg7Dau+32IE+yMDILQlVJ4fRGf9z2gM+z0AP6dTUm/ybf8vaJwdHPCKibvhgTcYV33/OO3+CqDgu3t4jwDz/ROvIKO5+Ljj4cL34jklthcFphXiNS6fcHkcRdBQIe8q0VlUrSdFK5IZenkSvX3VmhK8dtR0zkeJk8+qdf2l/QE11fJiarB9iqE424EOeTHw/QTL4kl977zjwqBiec03ba/vCgxfq9TXL2uViePBujp9B7VrA4fKummou3v+Klw1q9DXjAzpOy8YXgVL4lTn7JnGhb5pfX0jw+8XBoYttx+z+s6AUfN7bWz4VaNwUYG+s8KTKX37SvSdFY7+3/pMKZxWpu+s0MBqMTM+fyZgoN1/CjyD63uewhe9+torLc67ON5Gr5f/XuEAvAIdnfp+Ktd3VvihTx9ngmFxos9XOjbdS/IwfzrTONG4uSKY97H+OR2HoCq45gGsjtvRerHhPE9dw3CQ30HhcP11c98B+RCGC/C2fr1mJ0acBrt69PU5AxBmv3/SXn/JvUYPVot7krDJyQboCdO0Oa2584dk0LhXXqIHw9ZDm5P8DsFAR6a0y3uB6ZjQrGQgn8FkmroUz23xe+r1jXkrRI59ON5lJsCG69X8WwWJX/Pc9B8wcHIuVKBRWRq8twJ5kdm183tr7KIrWk063cH2tFyetofucTKM4GEh8POXN55ABqqTpJwJLRaY+/dh99xPLzUiXvdjP3sJ0zcUvnz2F+/RdQVtwCQ/MrjhPlbF3u8L14dwh5x/GUewOY7G1JOerbs78Hk9jrMyxa9QbUif25AD77z/CWeCC3L7kxvY5QdH4FhcBZ9Xvg2q0zREoweJ5VcexInQG0Zo8RuuKXQrPhEnQm/yh7tOOEqNbt4aX63AmrLVvol5gXoFohEuUJWS2aKtaB2DPAP/2jR3Ai9G6GFxNFiqaSUfNEfAQE3eEE9E+JqcsysfaNuK0hUOGghlkZJGOHRQ14vlm4kFmRGBJiWN8CCizJD2r8pARQp1BpvR+fuMr8BeC/AeqneWofI8DV/etUcn6hh3p69+tUdFPxRkto8+1YbGUPOBerreRLoNsom5AiFcOlTz0jFSKhuo2vFMEXBd+ptA2eAM39NV1AAB5sjEyNoZ7RX+BHXE7x5Z4gqZZDqNeICqrEEM4hFLOvZEQYxeS/sK4tRfbkHOm+mii4QaW5BiiCZ0JN1e3BY08QKpV9iQesi4LcjAzNZGfBRK+fX4KqjXFbyDV45Bi74CF8LfVOGsCPCC38VW4tK4IWpkionZYX1UKj46xK6swhkTA+2j7qq8NxMyNNxkrN4fi446zC8/1SEpCUdhWJIkzNumfr+P8uY+OomyhrktxehQkZhGUUPN/VKogACd7OCn9HXRwa0yu0OBx9bLJ/DQiIHJHTdojZzEjaBhVzOG6BU08iVhbuNj21CJeAxqb7ur0tf9Rmfn8mO7MKhAieQBunH8ad6ghFdqIrUjBO4S6hKotbzikWoEyrgpBcFzFLoEGlwH+YVkGgWa8udj8OCoJoGe9pjvHTxHKSEQWwe5VXgaQE0qiWUCzX02InPu0hdmUjGn9HXRWIhjIGz/lzDCLA53V/rCnJrwm0BDQTUqPCuRBMUD9+aMUXydl5jO8dnZV1RJRUOEZ5elL4yvr4ypk4DTw4dKeaufqLAwNssQt1E+yUwUOZk6f4G6jfIpUDwpYCy0fSIElt/1GuTvb7vBIjOHSqGRE7ksPb4QymWuhCF6qFQtEFFEYiY0igZFJd02qhjOxDzapu5BplwNTes4Zs7PoE4+kSvnJAu5NO/bP79AsphL6vJEFY6BwAy1s10i7BtDFFJJJeeECMgbWEpdnzx6RN32k3yoYkBZpy30qFNRK9wYEsM8ybgCsdQ7ejPZdfJsF+mSX9xjinH1xWbaK/rxynYgqiD1jK8tvNajG5fvP9SugriRiZ66+yOtTyKidoNcKGKFbzoUCrw/FWlmgT56bmejfDlsCp2sq2KGw72xv3iqvfuWL3KuiZLoOj2PxjA4KvR+g67Y2V9KFmHSWLo15iirXVuLHl2q5uicTPgXIPc8IgYbJf20/y16dJuiDF7aKYRDfzbeD3JOOHJh9SM5nwajnfhhLap29r09jPdf63bayz5pF6A7Ld1vwtaxyBcPvDc1+lKBi0SkqeXmjBUfou6+RCjjdX10ix0mpO7U2Idt2My5r3nt3N1hlxNk3kfjF8FXGTSniyMU/k4Mc1XpS3nVrpcIJfPq9S4i55PulnDXptvuZMP5MhOBwuxWKi7CYHufSrCKRNcDsqD6C9Bt+sjFNwrtw3RgBHZ3Ewnbw8gcsp46+C55pJ7a9GSUespuYoZ2+HcoEk+gtrFzcNXu38+EDhJHmfLjNmLutoBXlINq4zcTukjsbeUGhsQSW69lvoajYHfyI9mO5P0GJAOOaeUJlq3j5znko/TAowvZ13Q7tJEb4RedBogtkLmXVl8oF2ZjF3dvM9+lEg0KU+mVLMzREOjKPueELZgX2GC+6KW/ih7aqScxmY2RJNr5yRrJ4hlukbjPQ7t6wunZTposopqtUpNhTbzmueDZ61o6aEy2kz7MZaOzSXk9dJJ55x8nLWFTquBary9znrE7Uy71dPDVuBxF+TboF3EKqWNjUvoO9BVLkgmlZ/fuhc1mU9RN+oUoV3nEk9gQSZJJhqh5mvUCzlJD79bvzDBUkgCtu+LGmu7SlbTjpOQ8oAIC9ddwps85VHEgkLhAXUdsJ0k7uArarGeONObpM1J5NE8rlM6e1QWjFqD1eKVfgvQ3J3xZ51NQYG1l6IuSYSOlkEFHKsYstkzUzG37rs/TLmoNVut00ZP47QgJrO0MftY9jDL1+C7A12A9nTXD8OVz3Bq9TxrCN1QXCPn6BvehnAmGOdaVC0lqNXGBdDoJhoa/6Nomv67IPIUC9VQB4FCnVjLxN8g/h/2mz9gWjSQf+G0VEohaMszkbtokLfQDKAWOQcHdJc9MaXgen2mj5vG5qxEI8yq/if3O76YN8WpgxKNn1Qy/O33g7lBTIVDaCpSn3uG9RHmBZxPQoPXCZQ2cyL1wop4jEKr8SnSSy+dPlAt0oWvUOEMZRzn9VEogg+gJvkWfYJ+tvpIRCJHhDwvTBIt0dVdpgQxgYdi0FqK9aDxILCmQQWNh3rIWI1z791qlAtt+Esa2B/76eeaWHFo9+Gs5FznfuHe1FhoAvcrsTmFeT37s7UKRmPfr9T/8k+aNQqoYH3q9ZaGOFi57vcNzrQsWi8VisVgsFovFYrFYLBaLxWKxWCyWLP8Bd0OMHy9KQeAAAAAASUVORK5CYII=" alt="">
+                <img height="30px" width="30px" (click)="openInNewTab(profile.socialProfiles.webPortfolioUrl)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP-3V-FqF3DnueyZGN8zYKA-e8CCc51DmbyA&usqp=CAU">
+
+              </div>
+
+              <div class="mt-2 d-flex justify-content-center align-items-center flex-column">
+                <div> <span class="fw-bold">Meeting Link : </span> <a href=""> {{getInterviewLink(profile.metaData.interviewId)?.meetingUrl}} </a></div>
+                <div> <span class="fw-bold">Meeting Time : </span> {{getInterviewLink(profile.metaData.interviewId)?.dateTime | date}} | {{getInterviewLink(profile.metaData.interviewId)?.dateTime | date: "HH:mm"}}</div>
+
+              </div>
 
           </div>
         </div>
@@ -170,5 +174,333 @@
 
 
 </div>
+
+
+
+
+<h5 class="ps-4 mt-4">Pending Feedback</h5>
+
+<div class="profile-cards ps-4 mt-2" *ngIf="data.pendingFeedback.length > 0">
+  <ng-container *ngFor="let profile of data.pendingFeedback">
+    <mat-card class="profile container-fluid mb-3 overflow-hidden">
+      <mat-card-content class="pt-4">
+
+        <div class="profile__row row align-items-center">
+          <!-- basic details starts here  -->
+          <div class="profile__basic col-3 text-center position-relative">
+            <mat-divider [vertical]="true" class="zm-v-divider"></mat-divider>
+              <div>
+                <div>
+                  <img class="profile__basic__avatar" [src]="profile.profilePicUrl">
+
+                </div>
+
+                <div class="profile__basic-info__name-cv zm-lw-bold-600 mt-2">
+                  <span title={{profile.name}} ng-click="openProfilePage(profile)"> {{ profile.name.length <= 19 ? profile.name :
+                      (profile.name.slice(0, 20) + '...' ) | titlecase}}</span>
+                </div>
+
+                <div class="profile__basic-info__contact my-2 mb-3" *ngIf="profile.phoneNo"><span class="zm-lw-bold-600">Phone :
+                  </span>{{profile.phoneNo}}</div>
+              </div>
+          </div>
+
+
+
+
+
+          <!-- basic details ends here -->
+
+
+
+          <div class="profile-card__desc col-6 px-3 position-relative">
+            <mat-divider [vertical]="true" class="zm-v-divider"></mat-divider>
+            <div class="profile__details container mb-2">
+              <div class="profile__details__highlights col-12 text-center ">
+                <div class="zm-white-space-nowrap d-flex align-items-center" [matTooltip]="profile.location | titlecase">
+                  <mat-icon class="material-icons-rounded material-icons-outlined ms-1 me-1 text-secondary" matTooltip="Candidate Location"
+                        aria-label="Button that displays a tooltip in various positions">location_on</mat-icon>
+                         {{profile.location | titlecase}}
+
+
+                  </div>
+                <div class="zm-white-space-nowrap d-flex align-items-center" [matTooltip]="profile.exp">
+                  <mat-icon class="material-icons-rounded material-icons-outlined ms-1 me-1 text-secondary" matTooltip="Work Location"
+                  aria-label="Button that displays a tooltip in various positions">work_outline</mat-icon>
+                  {{profile.exp.min}} - {{profile.exp.max}} Yr(s)
+
+
+                  </div>
+                <div class="zm-white-space-nowrap d-flex align-items-center" [matTooltip]="profile.salary">
+                  <mat-icon class="material-icons-rounded material-icons-outlined ms-1 me-1 text-secondary" matTooltip="Salary"
+                  aria-label="Button that displays a tooltip in various positions">payments</mat-icon>
+
+
+
+                    {{profile.ctc}}</div>
+              </div>
+
+              <div class="zm-flex-gap-5 mb-1">
+                <div class="profile-details-left zm-lw-bold-600">Current Job:</div>
+                <div class="profile-details-right" [matTooltip]="profile.designation | titlecase">
+                  {{profile.designation | titlecase}} at {{profile.company}}
+
+                </div>
+                <div class="profile-details-right zm-data-not-avail" *ngIf="profile.designation?.length == 0">
+                  Not specified</div>
+
+              </div>
+              <div class="zm-flex-gap-5 mb-1">
+                <div class="profile-details-left zm-lw-bold-600">Education:
+                </div>
+                <div class="profile-details-right">
+                  <div *ngIf="profile.education.length > 0"  >
+                    <ng-container *ngFor="let edu of profile.education">
+                      <div class="text-wrap-skills" [matTooltip]="edu">{{edu.course}} from  {{edu.institute}}, {{edu.fromYear}} - {{edu.toYear}}</div>
+
+                    </ng-container>
+
+                  </div>
+                </div>
+              </div>
+              <div class="zm-flex-gap-5 mb-1" style="column-gap: 0%;">
+                <div class="profile-details-left zm-lw-bold-600">Pref. Location:</div>
+                <div class="d-flex-70p">
+                 {{profile.location}}
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
+          <div class="profile-card__action profile-card__action col-3">
+
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="me-2" height="30px" width="30px" (click)="openInNewTab(profile.socialProfiles.linkedInUrl)" src="data:image/png;base64,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" alt="">
+                <img class="me-2" height="30px" width="30px" (click)="openInNewTab(profile.socialProfiles.gitHubUrl)" src="data:image/png;base64,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" alt="">
+                <img height="30px" width="30px" (click)="openInNewTab(profile.socialProfiles.webPortfolioUrl)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP-3V-FqF3DnueyZGN8zYKA-e8CCc51DmbyA&usqp=CAU">
+
+              </div>
+
+              <div class="mt-2 d-flex justify-content-center align-items-center flex-column">
+                <div> <span class="fw-bold">Meeting Link : </span> <a href=""> {{getInterviewLink(profile.metaData.interviewId)?.meetingUrl}} </a></div>
+                <div> <span class="fw-bold">Meeting Time : </span> {{getInterviewLink(profile.metaData.interviewId)?.dateTime | date}} | {{getInterviewLink(profile.metaData.interviewId)?.dateTime | date: "HH:mm"}}</div>
+
+              </div>
+
+              <div class="mt-2 d-flex justify-content-center align-items-center">
+                <button type="submit" mat-raised-button color="primary"
+                class="waves-effect waves-light btn-success btn"  (click)="provideFeedback(profile)">Submit Feedback</button>
+              </div>
+
+          </div>
+        </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="profile-card__skills-row row my-3 pe-3 ps-3">
+        <div class="profile-card__key-skills-row col-6 position-relative">
+          <mat-divider vertical="true" class="zm-key-skills-v-divider"></mat-divider>
+
+          <p class="zm-lw-bold-600 mb-1">Key Skills</p>
+          <div class="col-12">
+            {{transformSkillsToDisplay(profile.keySkills)}}
+          </div>
+        </div>
+
+        <div class="profile-card__may-also-know-skills-row col-6 position-relative">
+          <mat-divider vertical="true" class="zm-rel-skills-v-divider"></mat-divider>
+          <p class="zm-lw-bold-600 mb-1">May also know</p>
+          <div class="col-12">
+            {{transformSkillsToDisplay(profile.mayAlsoKnow)}}
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card__additional-details row py-2 mt-2">
+          <div class="col-6 d-flex ps-4">
+            <div class= "me-4"><span class="text-secondary">Candidate evaluation prior to interview : </span> <span class="zm-lw-bold-600">{{profile.modifiedOn | date:'dd MMM y'}}</span></div>
+
+
+          </div>
+          <div class="col-6 d-flex">
+            <div>
+              <span class="text-secondary">Candidate specific questionare : </span> <span class="zm-lw-bold-600">{{profile.activeOn | date: 'dd MMM y'}} </span>
+            </div>
+          </div>
+      </div>
+      </mat-card-content>
+
+
+    </mat-card>
+  </ng-container>
+
+
+</div>
+
+
+
+<h5 class="ps-4 mt-4">Past Interviews</h5>
+
+<div class="profile-cards ps-4 mt-2" *ngIf="data.pastInterviews.length > 0">
+  <ng-container *ngFor="let profile of data.pastInterviews">
+    <mat-card class="profile container-fluid mb-3 overflow-hidden">
+      <mat-card-content class="pt-4">
+
+        <div class="profile__row row align-items-center">
+          <!-- basic details starts here  -->
+          <div class="profile__basic col-3 text-center position-relative">
+            <mat-divider [vertical]="true" class="zm-v-divider"></mat-divider>
+              <div>
+                <div>
+                  <img class="profile__basic__avatar" [src]="profile.profilePicUrl">
+                </div>
+
+                <div class="profile__basic-info__name-cv zm-lw-bold-600 mt-2">
+                  <span title={{profile.name}} ng-click="openProfilePage(profile)"> {{ profile.name.length <= 19 ? profile.name :
+                      (profile.name.slice(0, 20) + '...' ) | titlecase}}</span>
+                </div>
+
+                <div class="profile__basic-info__contact my-2 mb-3" *ngIf="profile.phoneNo"><span class="zm-lw-bold-600">Phone :
+                  </span>{{profile.phoneNo}}</div>
+              </div>
+          </div>
+
+
+
+
+
+          <!-- basic details ends here -->
+
+
+
+          <div class="profile-card__desc col-6 px-3 position-relative">
+            <mat-divider [vertical]="true" class="zm-v-divider"></mat-divider>
+            <div class="profile__details container mb-2">
+              <div class="profile__details__highlights col-12 text-center ">
+                <div class="zm-white-space-nowrap d-flex align-items-center" [matTooltip]="profile.location | titlecase">
+                  <mat-icon class="material-icons-rounded material-icons-outlined ms-1 me-1 text-secondary" matTooltip="Candidate Location"
+                        aria-label="Button that displays a tooltip in various positions">location_on</mat-icon>
+                         {{profile.location | titlecase}}
+
+
+                  </div>
+                <div class="zm-white-space-nowrap d-flex align-items-center" [matTooltip]="profile.exp">
+                  <mat-icon class="material-icons-rounded material-icons-outlined ms-1 me-1 text-secondary" matTooltip="Work Location"
+                  aria-label="Button that displays a tooltip in various positions">work_outline</mat-icon>
+                  {{profile.exp.min}} - {{profile.exp.max}} Yr(s)
+
+
+                  </div>
+                <div class="zm-white-space-nowrap d-flex align-items-center" [matTooltip]="profile.salary">
+                  <mat-icon class="material-icons-rounded material-icons-outlined ms-1 me-1 text-secondary" matTooltip="Salary"
+                  aria-label="Button that displays a tooltip in various positions">payments</mat-icon>
+
+
+
+                    {{profile.ctc}}</div>
+              </div>
+
+              <div class="zm-flex-gap-5 mb-1">
+                <div class="profile-details-left zm-lw-bold-600">Current Job:</div>
+                <div class="profile-details-right" [matTooltip]="profile.designation | titlecase">
+                  {{profile.designation | titlecase}} at {{profile.company}}
+
+                </div>
+                <div class="profile-details-right zm-data-not-avail" *ngIf="profile.designation?.length == 0">
+                  Not specified</div>
+
+              </div>
+              <div class="zm-flex-gap-5 mb-1">
+                <div class="profile-details-left zm-lw-bold-600">Education:
+                </div>
+                <div class="profile-details-right">
+                  <div *ngIf="profile.education.length > 0"  >
+                    <ng-container *ngFor="let edu of profile.education">
+                      <div class="text-wrap-skills" [matTooltip]="edu">{{edu.course}} from  {{edu.institute}}, {{edu.fromYear}} - {{edu.toYear}}</div>
+
+                    </ng-container>
+
+                  </div>
+                </div>
+              </div>
+              <div class="zm-flex-gap-5 mb-1" style="column-gap: 0%;">
+                <div class="profile-details-left zm-lw-bold-600">Pref. Location:</div>
+                <div class="d-flex-70p">
+                 {{profile.location}}
+                </div>
+              </div>
+
+              <div class="mt-2">
+                <div> <span class="fw-bold">Meeting Link : </span> <a href=""> {{getInterviewLink(profile.metaData.interviewId)?.meetingUrl}} </a></div>
+                <div> <span class="fw-bold">Meeting Time : </span> {{getInterviewLink(profile.metaData.interviewId)?.dateTime | date}} | {{getInterviewLink(profile.metaData.interviewId)?.dateTime | date: "HH:mm"}}</div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+
+          <div class="profile-card__action profile-card__action col-3 d-flex justify-content-center align-items-center">
+
+            <!-- <button type="submit" mat-raised-button color="primary"
+              class="waves-effect waves-light btn-success btn" >ADD TO JOB</button> -->
+              <div id="{{'scoreChart'+profile.id}}" style="width: 70%;height: 200px;"></div>
+
+
+
+          </div>
+        </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="profile-card__skills-row row my-3 pe-3 ps-3">
+        <div class="profile-card__key-skills-row col-6 position-relative">
+          <mat-divider vertical="true" class="zm-key-skills-v-divider"></mat-divider>
+
+          <p class="zm-lw-bold-600 mb-1">Key Skills</p>
+          <div class="col-12">
+            {{transformSkillsToDisplay(profile.keySkills)}}
+          </div>
+        </div>
+
+        <div class="profile-card__may-also-know-skills-row col-6 position-relative">
+          <mat-divider vertical="true" class="zm-rel-skills-v-divider"></mat-divider>
+          <p class="zm-lw-bold-600 mb-1">May also know</p>
+          <div class="col-12">
+            {{transformSkillsToDisplay(profile.mayAlsoKnow)}}
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card__additional-details row py-2 mt-2">
+          <div class="col-6 d-flex ps-4">
+            <div class= "me-4"><span class="text-secondary">Candidate evaluation prior to interview : </span> <span class="zm-lw-bold-600">{{profile.modifiedOn | date:'dd MMM y'}}</span></div>
+
+
+          </div>
+          <div class="col-6 d-flex">
+            <div>
+              <span class="text-secondary">Candidate specific questionare : </span> <span class="zm-lw-bold-600">{{profile.activeOn | date: 'dd MMM y'}} </span>
+            </div>
+          </div>
+      </div>
+      </mat-card-content>
+
+
+    </mat-card>
+  </ng-container>
+
+
+</div>
+
+
 
 
